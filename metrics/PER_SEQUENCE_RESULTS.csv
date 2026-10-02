@@ -1,0 +1,1 @@
+study_id,schema_version,experiment,tier,family,model,sequence,frames,gt_instances,predictions,tp,fp,fn,precision,recall,f1,ap50,ap75,mask_map50_95,tp_iou_mean,tp_dice_mean,ignored_predictions

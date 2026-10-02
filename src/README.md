@@ -1,0 +1,3 @@
+# Future authorized execution
+
+Read sibling `YOLO_Instance_Segmentation_MOTS20_Scaling_Study/STUDY_STANDARD.md` and STUDY_STATE.json. Reuse the frozen Largest benchmark_adapter and frozen_pilot implementation identified in provenance/BASELINE_REFERENCE.json; use the validated clean timing runner. Do not create a new preprocessing/evaluator implementation. Adapt only tier membership and owning-repository paths, record diffs/hashes, preserve exact sample lists, and freeze a fresh run before executing. Stage 0 does not authorize execution or downloads. No source runner is installed here yet to avoid accidental benchmark launch.

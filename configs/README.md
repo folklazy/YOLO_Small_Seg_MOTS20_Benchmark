@@ -1,0 +1,1 @@
+Setup-only protocol configuration inherited from Largest. NOT a frozen run. Before authorized execution, freeze this file and checkpoint/environment/source manifests into a fresh run. Shared paths resolve from workspace root; all generated framework outputs belong in this repository.

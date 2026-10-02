@@ -1,0 +1,22 @@
+# Shared resources and generated runtime artifacts
+.venv/
+.venvs/
+datasets/
+models/
+*.pt
+*.pth
+*.ckpt
+__pycache__/
+*.py[cod]
+.env
+.env.*
+predictions/
+logs/
+metrics/**/per_frame/
+metrics/**/per_instance/
+metrics/gt_frames.csv
+metrics/gt_instances.csv
+timing/**/all_frames.csv
+timing/**/round*.csv
+outputs/visualizations/
+# Intentionally retained canonical plots and evaluation summaries are versioned.

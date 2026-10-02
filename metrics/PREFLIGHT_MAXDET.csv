@@ -1,0 +1,1 @@
+study_id,schema_version,experiment,tier,family,model,checkpoint,max_dets,ap50,ap75,map50_95,ignored_detections_at_ap50,ap50_abs_difference_from_1000,ap75_abs_difference_from_1000,map50_95_abs_difference_from_1000,converged

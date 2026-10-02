@@ -1,0 +1,5 @@
+# Small (S) protocol — setup only
+
+Status: NOT_RUN; no frozen run exists. Use [STUDY_STANDARD.md](https://github.com/folklazy/YOLO_Instance_Segmentation_MOTS20_Scaling_Study/blob/main/STUDY_STANDARD.md) and [METHODOLOGY_REFERENCE.md](https://github.com/folklazy/YOLO_Instance_Segmentation_MOTS20_Scaling_Study/blob/main/METHODOLOGY_REFERENCE.md). Checkpoints: `yolo26s-seg.pt`, `yolo11s-seg.pt`, `yolov8s-seg.pt`.
+
+`configs/benchmark.yaml` inherits the validated Largest settings and AP maxDet200. Reuse exact baseline implementation and ordered manifests; do not rewrite preprocessing or evaluator. Model and framework output paths must remain inside this experiment except shared checkpoint/dataset inputs. Save a fresh run ID and freeze config/protocol, sources, environment and input hashes before an authorized preflight. No inference, preflight, timing or downloads were performed in Stage 0. Future run authorization is required; stop if 200 fails convergence and seek a common policy decision. Never automatically continue to another tier.
