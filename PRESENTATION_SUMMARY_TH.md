@@ -18,7 +18,7 @@
 
 ยังไม่รัน (NOT_RUN) — รอการอนุมัติ benchmark ของ tier นี้
 
-| Model | Mask mAP50-95 | AP50 | AP75 | Precision | Recall | F1 | TP-only IoU | TP-only Dice | Inference ms | Pipeline ms | FPS | Peak VRAM allocated MiB | Parameters |
+| Model | Mask mAP50-95 | AP50 | AP75 | Precision | Recall | F1 | TP-only IoU | TP-only Dice | Inference ms | Pipeline ms | FPS | Peak VRAM allocated (MiB) | Parameters |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 <!-- Add measured rows only, in fixed model order. -->
 
@@ -59,10 +59,6 @@
 <!-- Add measured rows only, in fixed model order. -->
 
 ## 7. ข้อควรระวังในการตีความ
-
-ยังไม่รัน (NOT_RUN) — รอการอนุมัติ benchmark ของ tier นี้
-
-## 8. สรุปสำหรับคุยกับพี่
 
 ยังไม่รัน (NOT_RUN) — รอการอนุมัติ benchmark ของ tier นี้
 
