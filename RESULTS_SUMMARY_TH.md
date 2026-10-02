@@ -1,51 +1,52 @@
 # สรุปผล Small (S) YOLO Instance Segmentation
 
-<!-- Template only. Populate from canonical CSV after validation; never invent measurements. -->
+<!-- COMPACT QUANTITATIVE SUMMARY. After COMPLETE + validated canonical CSV only.
+For NOT_RUN, retain headings and empty tables; state pending instead of inventing winners.
+Do not add per-model essays or visual case analysis. -->
 
 ## สรุปใน 1 นาที
 
-ยังไม่รัน (NOT_RUN) — รอการอนุมัติ benchmark ของ tier นี้
+<!-- 5–8 concise bullets: model membership; MOTS20 2,862 frames / 26,894 frame-level
+Person GT instances; pretrained / no fine-tuning; accuracy winner; inference and
+pipeline speed winners; lowest allocated VRAM; largest measured trade-off. -->
+ยังไม่รัน (NOT_RUN) — รอผลครบทุกโมเดลและการตรวจ canonical artifacts ก่อนสรุป
 
-## ผลหลัก
+## ผลลัพธ์หลัก
 
-ยังไม่รัน (NOT_RUN) — รอการอนุมัติ benchmark ของ tier นี้
+| Model | Mask mAP50-95 | AP75 | Recall | Inference ms | Pipeline ms | FPS | Peak VRAM MiB |
+|---|---|---|---|---|---|---|---|
+<!-- One canonical table, fixed family order. AP/Recall 6 decimals; ms/FPS 3; MiB 2. -->
 
-| Model | Mask mAP50-95 | Recall | F1 | Inference ms | Pipeline ms | FPS | Peak VRAM MiB |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-<!-- Add measured rows only, in fixed model order. -->
+## Winner ของแต่ละด้าน
 
-## แต่ละโมเดลเด่นด้านไหน
+| ด้าน | Model | Result |
+|---|---|---|
+<!-- Six rows: Mask mAP50-95, AP75, Recall, Inference speed, Pipeline speed, VRAM.
+Use explicit units. Winners require complete accuracy and accepted clean timing. -->
 
-ยังไม่รัน (NOT_RUN) — รอการอนุมัติ benchmark ของ tier นี้
+## สิ่งที่ตัวเลขบอกเรา
 
-## สิ่งที่น่าสนใจจากรอบนี้
+ยังไม่รัน (NOT_RUN) — รอผลครบทุกโมเดลและการตรวจ canonical artifacts ก่อนสรุป
 
-ยังไม่รัน (NOT_RUN) — รอการอนุมัติ benchmark ของ tier นี้
+## Trade-off หลัก
 
-## Trade-off ที่เห็น
+### Accuracy vs Speed
 
-ยังไม่รัน (NOT_RUN) — รอการอนุมัติ benchmark ของ tier นี้
+ยังไม่รัน (NOT_RUN) — รอผลครบทุกโมเดลและการตรวจ canonical artifacts ก่อนสรุป
 
-### Accuracy
+### Accuracy vs Memory
 
-ยังไม่รัน (NOT_RUN) — รอการอนุมัติ benchmark ของ tier นี้
+ยังไม่รัน (NOT_RUN) — รอผลครบทุกโมเดลและการตรวจ canonical artifacts ก่อนสรุป
 
-### Speed
+## ข้อควรระวังในการตีความ
 
-ยังไม่รัน (NOT_RUN) — รอการอนุมัติ benchmark ของ tier นี้
-
-### Memory / Resource
-
-ยังไม่รัน (NOT_RUN) — รอการอนุมัติ benchmark ของ tier นี้
-
-### ภาพรวม
-
-ยังไม่รัน (NOT_RUN) — รอการอนุมัติ benchmark ของ tier นี้
-
-## สิ่งที่ต้องระวังในการตีความ
-
-ยังไม่รัน (NOT_RUN) — รอการอนุมัติ benchmark ของ tier นี้
+ไม่มีการทดสอบ statistical significance; MOTS20 ไม่ใช่ผลทดสอบ CCTV robustness ขั้นสุดท้าย
+Pipeline ไม่รวม RLE preparation และ disk I/O; VRAM เป็น peak allocated ของ benchmark
 
 ## ข้อมูลสำหรับนำไปรวมต่อ
 
-ยังไม่รัน (NOT_RUN) — รอการอนุมัติ benchmark ของ tier นี้
+ยังไม่รัน (NOT_RUN) — รอผลครบทุกโมเดลและการตรวจ canonical artifacts ก่อนสรุป
+
+[TIER_RESULTS.csv](metrics/TIER_RESULTS.csv) · [REPORT.md](REPORT.md) ·
+[Visual analysis](PRESENTATION_SUMMARY_TH.md) ·
+[Master Study](https://github.com/folklazy/YOLO_Instance_Segmentation_MOTS20_Scaling_Study)
