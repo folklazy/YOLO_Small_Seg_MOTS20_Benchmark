@@ -1,0 +1,79 @@
+{
+  "timestamp": "2026-10-05T06:39:01.924534+00:00",
+  "status": "PASS",
+  "checks": [
+    {
+      "item": "Exactly 3 expected models",
+      "status": "PASS"
+    },
+    {
+      "item": "2862 frames and 26894 GT per model",
+      "status": "PASS"
+    },
+    {
+      "item": "Dataset hashes, dimensions and ordering",
+      "status": "PASS"
+    },
+    {
+      "item": "Frozen evaluator and preprocessing",
+      "status": "PASS"
+    },
+    {
+      "item": "Config and protocol freeze",
+      "status": "PASS"
+    },
+    {
+      "item": "Framework and environment",
+      "status": "PASS"
+    },
+    {
+      "item": "AP maxDet 200 preflight",
+      "status": "PASS"
+    },
+    {
+      "item": "Finite native Person predictions",
+      "status": "PASS"
+    },
+    {
+      "item": "No model cap saturation",
+      "status": "PASS"
+    },
+    {
+      "item": "Accuracy arithmetic and sequence completeness",
+      "status": "PASS"
+    },
+    {
+      "item": "Three clean timing rounds per model",
+      "status": "PASS"
+    },
+    {
+      "item": "Exact timing frame order",
+      "status": "PASS"
+    },
+    {
+      "item": "Timing pooled statistics and VRAM",
+      "status": "PASS"
+    },
+    {
+      "item": "Checkpoint hashes",
+      "status": "PASS"
+    },
+    {
+      "item": "Frozen input archive",
+      "status": "PASS"
+    }
+  ],
+  "frames_per_model": 2862,
+  "gt_instances": 26894,
+  "models": [
+    "yolo26s-seg.pt",
+    "yolo11s-seg.pt",
+    "yolov8s-seg.pt"
+  ],
+  "timing_clean_rounds": 9,
+  "inference_rerun": false,
+  "frozen_runtime_sources_unchanged": true,
+  "archive_unchanged": true,
+  "dataset_and_checkpoint_hashes_unchanged": true,
+  "environment_packages_unchanged": true
+}

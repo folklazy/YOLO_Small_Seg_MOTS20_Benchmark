@@ -1,0 +1,183 @@
+{
+  "documentation_status": "PASS",
+  "tiers": [
+    {
+      "tier": "Large",
+      "status": "PASS",
+      "cases": 4
+    },
+    {
+      "tier": "Second_Largest",
+      "status": "PASS",
+      "cases": 4
+    },
+    {
+      "tier": "Medium",
+      "status": "PASS",
+      "cases": 4
+    },
+    {
+      "tier": "Small",
+      "status": "PASS",
+      "cases": 0,
+      "profile": "explicit-user-numerical-layout"
+    },
+    {
+      "tier": "Nano",
+      "status": "NOT_RUN",
+      "cases": 0
+    }
+  ],
+  "measurement_files_unchanged": 158,
+  "inference_rerun": false,
+  "existing_measured_values_changed": false,
+  "new_small_benchmark_interfaces": [
+    "YOLO_Small_Seg_MOTS20_Benchmark/metrics/MODEL_COMPLEXITY.csv",
+    "YOLO_Small_Seg_MOTS20_Benchmark/metrics/PER_SEQUENCE_RESULTS.csv",
+    "YOLO_Small_Seg_MOTS20_Benchmark/metrics/PREFLIGHT_MAXDET.csv",
+    "YOLO_Small_Seg_MOTS20_Benchmark/metrics/TIER_RESULTS.csv",
+    "YOLO_Small_Seg_MOTS20_Benchmark/metrics/TIMING_SUMMARY.csv"
+  ],
+  "embedded_images_checked": 23,
+  "remote_images_checked": false,
+  "images": [
+    {
+      "repository": "YOLO_Large_Seg_MOTS20_Benchmark",
+      "image": "outputs/plots/benchmark-20260929T0520Z/ap50_ap75.png",
+      "git_tracked": true,
+      "png_integrity": "PASS"
+    },
+    {
+      "repository": "YOLO_Large_Seg_MOTS20_Benchmark",
+      "image": "outputs/plots/benchmark-20260929T0520Z/fps.png",
+      "git_tracked": true,
+      "png_integrity": "PASS"
+    },
+    {
+      "repository": "YOLO_Large_Seg_MOTS20_Benchmark",
+      "image": "outputs/plots/benchmark-20260929T0520Z/inference_latency.png",
+      "git_tracked": true,
+      "png_integrity": "PASS"
+    },
+    {
+      "repository": "YOLO_Large_Seg_MOTS20_Benchmark",
+      "image": "outputs/plots/benchmark-20260929T0520Z/mask_map.png",
+      "git_tracked": true,
+      "png_integrity": "PASS"
+    },
+    {
+      "repository": "YOLO_Large_Seg_MOTS20_Benchmark",
+      "image": "outputs/plots/benchmark-20260929T0520Z/peak_vram.png",
+      "git_tracked": true,
+      "png_integrity": "PASS"
+    },
+    {
+      "repository": "YOLO_Large_Seg_MOTS20_Benchmark",
+      "image": "outputs/plots/benchmark-20260929T0520Z/precision_recall_f1.png",
+      "git_tracked": true,
+      "png_integrity": "PASS"
+    },
+    {
+      "repository": "YOLO_Large_Seg_MOTS20_Benchmark",
+      "image": "outputs/plots/benchmark-20260929T0520Z/readable/accuracy_vs_latency.png",
+      "git_tracked": true,
+      "png_integrity": "PASS"
+    },
+    {
+      "repository": "YOLO_Large_Seg_MOTS20_Benchmark",
+      "image": "outputs/visualizations/qualitative/case_01_comparison.png",
+      "git_tracked": true,
+      "png_integrity": "PASS"
+    },
+    {
+      "repository": "YOLO_Large_Seg_MOTS20_Benchmark",
+      "image": "outputs/visualizations/qualitative/case_02_comparison.png",
+      "git_tracked": true,
+      "png_integrity": "PASS"
+    },
+    {
+      "repository": "YOLO_Large_Seg_MOTS20_Benchmark",
+      "image": "outputs/visualizations/qualitative/case_03_comparison.png",
+      "git_tracked": true,
+      "png_integrity": "PASS"
+    },
+    {
+      "repository": "YOLO_Large_Seg_MOTS20_Benchmark",
+      "image": "outputs/visualizations/qualitative/case_04_comparison.png",
+      "git_tracked": true,
+      "png_integrity": "PASS"
+    },
+    {
+      "repository": "YOLO_Second_Largest_Seg_MOTS20_Benchmark",
+      "image": "outputs/plots/benchmark-20261001T0352Z/cross_tier_map.png",
+      "git_tracked": true,
+      "png_integrity": "PASS"
+    },
+    {
+      "repository": "YOLO_Second_Largest_Seg_MOTS20_Benchmark",
+      "image": "outputs/visualizations/qualitative/case_01_comparison.png",
+      "git_tracked": true,
+      "png_integrity": "PASS"
+    },
+    {
+      "repository": "YOLO_Second_Largest_Seg_MOTS20_Benchmark",
+      "image": "outputs/visualizations/qualitative/case_02_comparison.png",
+      "git_tracked": true,
+      "png_integrity": "PASS"
+    },
+    {
+      "repository": "YOLO_Second_Largest_Seg_MOTS20_Benchmark",
+      "image": "outputs/visualizations/qualitative/case_03_comparison.png",
+      "git_tracked": true,
+      "png_integrity": "PASS"
+    },
+    {
+      "repository": "YOLO_Second_Largest_Seg_MOTS20_Benchmark",
+      "image": "outputs/visualizations/qualitative/case_04_comparison.png",
+      "git_tracked": true,
+      "png_integrity": "PASS"
+    },
+    {
+      "repository": "YOLO_Medium_Seg_MOTS20_Benchmark",
+      "image": "outputs/visualizations/qualitative/case_01_comparison.png",
+      "git_tracked": true,
+      "png_integrity": "PASS"
+    },
+    {
+      "repository": "YOLO_Medium_Seg_MOTS20_Benchmark",
+      "image": "outputs/visualizations/qualitative/case_02_comparison.png",
+      "git_tracked": true,
+      "png_integrity": "PASS"
+    },
+    {
+      "repository": "YOLO_Medium_Seg_MOTS20_Benchmark",
+      "image": "outputs/visualizations/qualitative/case_03_comparison.png",
+      "git_tracked": true,
+      "png_integrity": "PASS"
+    },
+    {
+      "repository": "YOLO_Medium_Seg_MOTS20_Benchmark",
+      "image": "outputs/visualizations/qualitative/case_04_comparison.png",
+      "git_tracked": true,
+      "png_integrity": "PASS"
+    },
+    {
+      "repository": "YOLO_Small_Seg_MOTS20_Benchmark",
+      "image": "outputs/plots/01_mask_map50_95.png",
+      "git_tracked": true,
+      "png_integrity": "PASS"
+    },
+    {
+      "repository": "YOLO_Small_Seg_MOTS20_Benchmark",
+      "image": "outputs/plots/04_pipeline_fps.png",
+      "git_tracked": true,
+      "png_integrity": "PASS"
+    },
+    {
+      "repository": "YOLO_Small_Seg_MOTS20_Benchmark",
+      "image": "outputs/plots/05_peak_vram.png",
+      "git_tracked": true,
+      "png_integrity": "PASS"
+    }
+  ]
+}

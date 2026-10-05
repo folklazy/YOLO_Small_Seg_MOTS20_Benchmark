@@ -1,0 +1,50 @@
+[
+  {
+    "sequence": "MOTS20-02",
+    "frame": 1
+  },
+  {
+    "sequence": "MOTS20-02",
+    "frame": 300
+  },
+  {
+    "sequence": "MOTS20-02",
+    "frame": 600
+  },
+  {
+    "sequence": "MOTS20-05",
+    "frame": 1
+  },
+  {
+    "sequence": "MOTS20-05",
+    "frame": 419
+  },
+  {
+    "sequence": "MOTS20-05",
+    "frame": 837
+  },
+  {
+    "sequence": "MOTS20-09",
+    "frame": 1
+  },
+  {
+    "sequence": "MOTS20-09",
+    "frame": 263
+  },
+  {
+    "sequence": "MOTS20-09",
+    "frame": 525
+  },
+  {
+    "sequence": "MOTS20-11",
+    "frame": 1
+  },
+  {
+    "sequence": "MOTS20-11",
+    "frame": 450
+  },
+  {
+    "sequence": "MOTS20-11",
+    "frame": 900
+  }
+]

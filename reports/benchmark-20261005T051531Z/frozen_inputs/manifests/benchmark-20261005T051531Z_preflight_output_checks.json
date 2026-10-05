@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "model": "yolo26s-seg.pt",
+      "frames": 100,
+      "finite_output": true,
+      "native_nonempty_masks": true,
+      "status": "PASS"
+    },
+    {
+      "model": "yolo11s-seg.pt",
+      "frames": 100,
+      "finite_output": true,
+      "native_nonempty_masks": true,
+      "status": "PASS"
+    },
+    {
+      "model": "yolov8s-seg.pt",
+      "frames": 100,
+      "finite_output": true,
+      "native_nonempty_masks": true,
+      "status": "PASS"
+    }
+  ]
+}

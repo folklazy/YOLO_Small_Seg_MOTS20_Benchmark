@@ -1,0 +1,49 @@
+{
+  "run_id": "benchmark-20261005T051531Z",
+  "timestamp": "2026-10-05T05:15:31.568281+00:00",
+  "archived_setup_documents": [
+    {
+      "original": "README.md",
+      "archive": "reports/archive/README.md.pre-small-benchmark-20261005T051531Z",
+      "sha256": "26fe83b812170a3ba03c0cdb4624a7e7e13be1bea2cea3e3a1a7586f97931884"
+    },
+    {
+      "original": "REPORT.md",
+      "archive": "reports/archive/REPORT.md.pre-small-benchmark-20261005T051531Z",
+      "sha256": "cf8e0dba81a2e794180e4e54f99ffc3dd038c3131d128006e3826a9de41e9c24"
+    },
+    {
+      "original": "RESULTS_SUMMARY_TH.md",
+      "archive": "reports/archive/RESULTS_SUMMARY_TH.md.pre-small-benchmark-20261005T051531Z",
+      "sha256": "0ce5870b85d78d994b1e8fb444809b71732592a9c128bbdae7f0b8b8f542dfc7"
+    },
+    {
+      "original": "PRESENTATION_SUMMARY_TH.md",
+      "archive": "reports/archive/PRESENTATION_SUMMARY_TH.md.pre-small-benchmark-20261005T051531Z",
+      "sha256": "5884ef27282a801e73cde584148964819548cd748f8bcf0b434b3b72f13bb29b"
+    },
+    {
+      "original": "EXPERIMENT_PROTOCOL.md",
+      "archive": "reports/archive/EXPERIMENT_PROTOCOL.md.pre-small-benchmark-20261005T051531Z",
+      "sha256": "6bbad9c6939572c0a23e356564ebc565726281edb07108528a64ab023f51649a"
+    },
+    {
+      "original": "configs/benchmark.yaml",
+      "archive": "reports/archive/benchmark.yaml.pre-small-benchmark-20261005T051531Z",
+      "sha256": "7c51b13369671dccd34675bdc9b6ebccf049c113f1b2d4e7838d465fc487ba7b"
+    },
+    {
+      "original": "manifests/environment.json",
+      "archive": "reports/archive/environment.json.pre-small-benchmark-20261005T051531Z",
+      "sha256": "4be655dd98646382422a1e654b566ee841568ed25e51f849c9869968f4b218c0"
+    },
+    {
+      "original": "manifests/STANDARDIZATION.json",
+      "archive": "reports/archive/STANDARDIZATION.json.pre-small-benchmark-20261005T051531Z",
+      "sha256": "1e080d9c53addf747bb8b63791e0ec14426aa90855a9c25804e9d058ca762968"
+    }
+  ],
+  "user_authorization": "Small only; download missing official checkpoints; do not begin Nano",
+  "report_layout_override": "Explicit latest user headings replace qualitative-layout template for Small only",
+  "resume_policy": "Reuse complete saved model artifacts; no inference for documentation; stop on corrupt or partial accuracy pending audited continuation"
+}

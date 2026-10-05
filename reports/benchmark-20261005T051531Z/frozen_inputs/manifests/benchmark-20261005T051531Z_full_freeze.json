@@ -1,0 +1,62 @@
+{
+  "timestamp": "2026-10-05T05:25:17.109688+00:00",
+  "config_sha256": "7c51b13369671dccd34675bdc9b6ebccf049c113f1b2d4e7838d465fc487ba7b",
+  "protocol_sha256": "92c50d02bd4209afc6923197f674cbc1149f5a10b6da521fe16224652a0dc5c0",
+  "sources": {
+    "src/report_small.py": "b8bbf9aff4722839335148fcf119c53b4da619c62d00b11bd6a2e7128e8879cd",
+    "src/timing_small.py": "b871b18200b90678b30be2dc3a3dd9f475f2d657bab52e1b54648c1d23c6c778",
+    "src/build_small_results.py": "4237f4ef0e8825ff505aee66750ffc7c2a74a55b9c588aa904e55499b99a7168",
+    "src/benchmark_adapter.py": "c13177d47f40dc59f83e5d5227d796e67c09d915c8573f169131cee39974260d",
+    "src/benchmark.py": "ec7cbfd05ccdfa503aefc0bbb796542152d3b184ae9344ab4f7c59d27078f7d3",
+    "src/run_small.py": "7071c93170652f37f4d5d533e98bf4855f103e4c935673f1e4316ccf0d471714",
+    "src/validate.py": "addaaeb1a9b48dc4484611325cc8589f8bbbfd47cf9f8987d16602c403d9f710",
+    "src/frozen_pilot/mots.py": "01e4a750d8ed6bd1d0002a7b906f351ff9d7b59d3f6e31db633cd4b463b0f51d",
+    "src/frozen_pilot/visualize.py": "6188a131ae284dfce825903f3cd3b33e5aa9d6638d51c1d9a32bddf0016cffbf",
+    "src/frozen_pilot/metrics.py": "3f39f8bed8d62677ea1f6fbdce4415e04ccaede8b0ae0425fd63f78594980721",
+    "src/frozen_pilot/test_pipeline.py": "5e785fbf0619c5ad7818145ae29c436aec5bbe572f5121ff860e1838dab9a0a2",
+    "src/frozen_pilot/yolo_adapter.py": "d739c5477490b805773e1320e744052152dd1acc9e03719fed4a588ed7b2a36f"
+  },
+  "timing_order": [
+    [
+      "yolo26s-seg.pt",
+      "yolov8s-seg.pt",
+      "yolo11s-seg.pt"
+    ],
+    [
+      "yolov8s-seg.pt",
+      "yolo11s-seg.pt",
+      "yolo26s-seg.pt"
+    ],
+    [
+      "yolo11s-seg.pt",
+      "yolo26s-seg.pt",
+      "yolov8s-seg.pt"
+    ]
+  ],
+  "seed": 20260929,
+  "frame_list_sha256": "3bdd87baddcbae32c7ed9ad7ec01bad613d0e0b837b84c4a3fe45eb1dc3b2d78",
+  "sample_hashes": {
+    "preflight_frames.json": "5e66c48b3fd844dcd7ce9bb770c6f65df37efb2846b4ae05ace49c752eb6f601",
+    "timing_frames.json": "5e66c48b3fd844dcd7ce9bb770c6f65df37efb2846b4ae05ace49c752eb6f601",
+    "visualization_frames.json": "b64d28af8312c544f9aff083dccc9fb4a9ca7e28d8a43617388869a38f5b60c6"
+  },
+  "shared_reference": {
+    "timestamp": "2026-10-05T05:20:01.229362+00:00",
+    "status": "PASS",
+    "dataset_compatibility": "PASS",
+    "environment_compatibility": "PASS",
+    "framework_compatibility": "PASS",
+    "same_frame_order_hashes_dimensions_gt_metadata": true,
+    "reference_repository": "YOLO_Large_Seg_MOTS20_Benchmark",
+    "reference_hashes": {
+      "images.json": "3bdd87baddcbae32c7ed9ad7ec01bad613d0e0b837b84c4a3fe45eb1dc3b2d78",
+      "dataset_manifest.json": "43cd08407a5511877784dfde3d112f37b7db35a855c2bcd4f6ebccd274f91170",
+      "preflight_frames.json": "5e66c48b3fd844dcd7ce9bb770c6f65df37efb2846b4ae05ace49c752eb6f601",
+      "timing_frames.json": "5e66c48b3fd844dcd7ce9bb770c6f65df37efb2846b4ae05ace49c752eb6f601",
+      "visualization_frames.json": "b64d28af8312c544f9aff083dccc9fb4a9ca7e28d8a43617388869a38f5b60c6",
+      "framework_source_hashes.json": "8fd3e65cd72c981f8c5524efaacec9bff8a334ee02c8d9e691940a729f242670"
+    }
+  },
+  "checkpoint_manifest_sha256": "640fdaf41169fec6d70762923b32562504eb451ff2acbc320a57ec3e047a83c1",
+  "dataset_manifest_sha256": "d490a0bb880d01806a546419305c61ab668e44361f36987226f98880a34127a7"
+}

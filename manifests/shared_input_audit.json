@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-10-05T05:20:01.229362+00:00",
+  "status": "PASS",
+  "dataset_compatibility": "PASS",
+  "environment_compatibility": "PASS",
+  "framework_compatibility": "PASS",
+  "same_frame_order_hashes_dimensions_gt_metadata": true,
+  "reference_repository": "YOLO_Large_Seg_MOTS20_Benchmark",
+  "reference_hashes": {
+    "images.json": "3bdd87baddcbae32c7ed9ad7ec01bad613d0e0b837b84c4a3fe45eb1dc3b2d78",
+    "dataset_manifest.json": "43cd08407a5511877784dfde3d112f37b7db35a855c2bcd4f6ebccd274f91170",
+    "preflight_frames.json": "5e66c48b3fd844dcd7ce9bb770c6f65df37efb2846b4ae05ace49c752eb6f601",
+    "timing_frames.json": "5e66c48b3fd844dcd7ce9bb770c6f65df37efb2846b4ae05ace49c752eb6f601",
+    "visualization_frames.json": "b64d28af8312c544f9aff083dccc9fb4a9ca7e28d8a43617388869a38f5b60c6",
+    "framework_source_hashes.json": "8fd3e65cd72c981f8c5524efaacec9bff8a334ee02c8d9e691940a729f242670"
+  }
+}

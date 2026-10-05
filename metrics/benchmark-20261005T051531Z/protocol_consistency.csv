@@ -1,0 +1,16 @@
+item,status
+Exactly 3 expected models,PASS
+2862 frames and 26894 GT per model,PASS
+"Dataset hashes, dimensions and ordering",PASS
+Frozen evaluator and preprocessing,PASS
+Config and protocol freeze,PASS
+Framework and environment,PASS
+AP maxDet 200 preflight,PASS
+Finite native Person predictions,PASS
+No model cap saturation,PASS
+Accuracy arithmetic and sequence completeness,PASS
+Three clean timing rounds per model,PASS
+Exact timing frame order,PASS
+Timing pooled statistics and VRAM,PASS
+Checkpoint hashes,PASS
+Frozen input archive,PASS

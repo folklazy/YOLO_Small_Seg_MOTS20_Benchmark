@@ -1,0 +1,15 @@
+{
+  "source": "metrics/TIER_RESULTS.csv",
+  "source_sha256": "36ea47db9225ffd91aa77c45313ccb858a7bdb8ad5f442fa62d97afe3ca0d4b5",
+  "generator": "src/report_small.py",
+  "generator_sha256": "b8bbf9aff4722839335148fcf119c53b4da619c62d00b11bd6a2e7128e8879cd",
+  "timestamp": "2026-10-05T06:39:03.371328+00:00",
+  "outputs": {
+    "outputs/plots/01_mask_map50_95.png": "3de2134783dd8b5784c56acd9ba4ec1cab1bbf78c609e5e7735e28d847693f1e",
+    "outputs/plots/02_ap50_ap75.png": "ad8cfde11cd1f4f437dce0711a9a2c43a95427fd9f4c367b5672c29e5a8c8d2a",
+    "outputs/plots/03_inference_latency.png": "f6bee83cfa7f6d376de2d38361e3c48f44d1116a9182d66fa9b4271b5f6f50d4",
+    "outputs/plots/04_pipeline_fps.png": "a0ded630f168eee12be13be8ff0402bfaa0277a454d0da0476b7a0e359cf1762",
+    "outputs/plots/05_peak_vram.png": "9f46c7676072641a108c4ce2646f501a9908cb600511fb3becba098778d5b701",
+    "outputs/plots/06_accuracy_vs_latency.png": "7ba09c917101b7cd26bfa6ecd3a9f49b4a1c9efba73ec78d97907dfbee2d3342"
+  }
+}

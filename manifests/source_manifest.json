@@ -1,0 +1,27 @@
+{
+  "mots.py": {
+    "original": "YOLO_Large_Seg_MOTS20_Benchmark/src/frozen_pilot/mots.py",
+    "snapshot": "YOLO_Small_Seg_MOTS20_Benchmark/src/frozen_pilot/mots.py",
+    "sha256": "01e4a750d8ed6bd1d0002a7b906f351ff9d7b59d3f6e31db633cd4b463b0f51d"
+  },
+  "metrics.py": {
+    "original": "YOLO_Large_Seg_MOTS20_Benchmark/src/frozen_pilot/metrics.py",
+    "snapshot": "YOLO_Small_Seg_MOTS20_Benchmark/src/frozen_pilot/metrics.py",
+    "sha256": "3f39f8bed8d62677ea1f6fbdce4415e04ccaede8b0ae0425fd63f78594980721"
+  },
+  "yolo_adapter.py": {
+    "original": "YOLO_Large_Seg_MOTS20_Benchmark/src/frozen_pilot/yolo_adapter.py",
+    "snapshot": "YOLO_Small_Seg_MOTS20_Benchmark/src/frozen_pilot/yolo_adapter.py",
+    "sha256": "d739c5477490b805773e1320e744052152dd1acc9e03719fed4a588ed7b2a36f"
+  },
+  "visualize.py": {
+    "original": "YOLO_Large_Seg_MOTS20_Benchmark/src/frozen_pilot/visualize.py",
+    "snapshot": "YOLO_Small_Seg_MOTS20_Benchmark/src/frozen_pilot/visualize.py",
+    "sha256": "6188a131ae284dfce825903f3cd3b33e5aa9d6638d51c1d9a32bddf0016cffbf"
+  },
+  "test_pipeline.py": {
+    "original": "YOLO_Large_Seg_MOTS20_Benchmark/src/frozen_pilot/test_pipeline.py",
+    "snapshot": "YOLO_Small_Seg_MOTS20_Benchmark/src/frozen_pilot/test_pipeline.py",
+    "sha256": "5e785fbf0619c5ad7818145ae29c436aec5bbe572f5121ff860e1838dab9a0a2"
+  }
+}

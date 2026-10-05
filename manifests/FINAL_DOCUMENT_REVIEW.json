@@ -1,0 +1,300 @@
+{
+  "timestamp": "2026-10-05T06:44:21.451024+00:00",
+  "status": "PASS",
+  "generator_sha256": "37007bfa84afdec5e63f90ac7eaece1897bd455f8cc9c49fe4815cf6be90fa25",
+  "before": {
+    "README.md": "4370074c5aac888563e2be4ff89fcfb8e3f74b11ce026e5552a8e880837a8671",
+    "REPORT.md": "6553943b5347f9abfb563fc567532cf0ddb024164f7e904a4b397afad3d1d7fd",
+    "RESULTS_SUMMARY_TH.md": "0590b468fcfa94e8e72a1ec39c56cb1f55fee8d9983a566eda518091826b9125",
+    "PRESENTATION_SUMMARY_TH.md": "9e6fe4efbd21d85915cf0a59ac1bcfc11421bf25cc53916bd4a7a175ec5b8517",
+    "manifests/STANDARDIZATION.json": "7f7ad80d11887adbb92eaafc61ac3fc6d69b27227dd0cb05c57270b3267f5bc3"
+  },
+  "after": {
+    "README.md": "4370074c5aac888563e2be4ff89fcfb8e3f74b11ce026e5552a8e880837a8671",
+    "REPORT.md": "6553943b5347f9abfb563fc567532cf0ddb024164f7e904a4b397afad3d1d7fd",
+    "RESULTS_SUMMARY_TH.md": "0590b468fcfa94e8e72a1ec39c56cb1f55fee8d9983a566eda518091826b9125",
+    "PRESENTATION_SUMMARY_TH.md": "d70cbaf424880e31fd1476244af4a9bb5a941481c7bc4c2eddaff22d03eca71e",
+    "manifests/STANDARDIZATION.json": "7f7ad80d11887adbb92eaafc61ac3fc6d69b27227dd0cb05c57270b3267f5bc3"
+  },
+  "canonical_metrics_sha256": {
+    "metrics/TIER_RESULTS.csv": "36ea47db9225ffd91aa77c45313ccb858a7bdb8ad5f442fa62d97afe3ca0d4b5",
+    "metrics/PER_SEQUENCE_RESULTS.csv": "f3f26f2b33a39ae3c8d0e6b8e3ece67dea583e3918fc8ce44d26ba3a7049edc0",
+    "metrics/TIMING_SUMMARY.csv": "8caa06dffcc9a37017a0b82c60f1c03e24d527c1898929e7fbc717309c18f58a",
+    "metrics/MODEL_COMPLEXITY.csv": "296be79fcf600c4430fc112da653b218de2c8c25e7cc092340cbf420507bd24d",
+    "metrics/PREFLIGHT_MAXDET.csv": "53822b1e37685a0e3af248ab6545291d1fe2a0de511f1884ec60495271e4cebb"
+  },
+  "numeric_claims": [
+    {
+      "model": "YOLO26s-Seg",
+      "source": "metrics/TIER_RESULTS.csv",
+      "field": "recall",
+      "decimals": 2,
+      "percent": true,
+      "display": "78.96%"
+    },
+    {
+      "model": "YOLO26s-Seg",
+      "source": "metrics/TIER_RESULTS.csv",
+      "field": "inference_ms_mean",
+      "decimals": 3,
+      "percent": false,
+      "display": "17.308"
+    },
+    {
+      "model": "YOLO26s-Seg",
+      "source": "metrics/TIER_RESULTS.csv",
+      "field": "pipeline_ms_mean",
+      "decimals": 3,
+      "percent": false,
+      "display": "78.828"
+    },
+    {
+      "model": "YOLO26s-Seg",
+      "source": "metrics/TIER_RESULTS.csv",
+      "field": "peak_allocated_vram_mib",
+      "decimals": 2,
+      "percent": false,
+      "display": "872.67"
+    },
+    {
+      "model": "YOLO11s-Seg",
+      "source": "metrics/TIER_RESULTS.csv",
+      "field": "mask_map50_95",
+      "decimals": 6,
+      "percent": false,
+      "display": "0.483269"
+    },
+    {
+      "model": "YOLOv8s-Seg",
+      "source": "metrics/TIER_RESULTS.csv",
+      "field": "mask_map50_95",
+      "decimals": 6,
+      "percent": false,
+      "display": "0.482763"
+    },
+    {
+      "model": "YOLOv8s-Seg",
+      "source": "metrics/TIER_RESULTS.csv",
+      "field": "inference_ms_mean",
+      "decimals": 3,
+      "percent": false,
+      "display": "15.220"
+    },
+    {
+      "model": "YOLOv8s-Seg",
+      "source": "metrics/TIER_RESULTS.csv",
+      "field": "pipeline_ms_mean",
+      "decimals": 3,
+      "percent": false,
+      "display": "92.173"
+    },
+    {
+      "model": "YOLOv8s-Seg",
+      "source": "metrics/TIER_RESULTS.csv",
+      "field": "peak_allocated_vram_mib",
+      "decimals": 2,
+      "percent": false,
+      "display": "1139.01"
+    },
+    {
+      "model": "YOLO26s-Seg",
+      "source": "metrics/TIER_RESULTS.csv",
+      "field": "recall",
+      "decimals": 2,
+      "percent": true,
+      "display": "78.96%"
+    },
+    {
+      "model": "YOLO26s-Seg",
+      "source": "metrics/TIER_RESULTS.csv",
+      "field": "inference_ms_mean",
+      "decimals": 3,
+      "percent": false,
+      "display": "17.308"
+    },
+    {
+      "model": "YOLO26s-Seg",
+      "source": "metrics/TIMING_SUMMARY.csv",
+      "stage": "postprocessing",
+      "field": "mean_ms",
+      "decimals": 3,
+      "percent": false,
+      "display": "59.810"
+    },
+    {
+      "model": "YOLO26s-Seg",
+      "source": "metrics/TIER_RESULTS.csv",
+      "field": "pipeline_ms_mean",
+      "decimals": 3,
+      "percent": false,
+      "display": "78.828"
+    },
+    {
+      "model": "YOLO26s-Seg",
+      "source": "metrics/TIER_RESULTS.csv",
+      "field": "peak_allocated_vram_mib",
+      "decimals": 2,
+      "percent": false,
+      "display": "872.67"
+    },
+    {
+      "model": "YOLO11s-Seg",
+      "source": "metrics/TIER_RESULTS.csv",
+      "field": "mask_map50_95",
+      "decimals": 6,
+      "percent": false,
+      "display": "0.483269"
+    },
+    {
+      "model": "YOLOv8s-Seg",
+      "source": "metrics/TIER_RESULTS.csv",
+      "field": "mask_map50_95",
+      "decimals": 6,
+      "percent": false,
+      "display": "0.482763"
+    },
+    {
+      "model": "YOLO11s-Seg",
+      "source": "metrics/TIER_RESULTS.csv",
+      "field": "ap75",
+      "decimals": 6,
+      "percent": false,
+      "display": "0.513823"
+    },
+    {
+      "model": "YOLOv8s-Seg",
+      "source": "metrics/TIER_RESULTS.csv",
+      "field": "ap75",
+      "decimals": 6,
+      "percent": false,
+      "display": "0.506411"
+    },
+    {
+      "model": "YOLO11s-Seg",
+      "source": "metrics/TIER_RESULTS.csv",
+      "field": "recall",
+      "decimals": 2,
+      "percent": true,
+      "display": "76.41%"
+    },
+    {
+      "model": "YOLOv8s-Seg",
+      "source": "metrics/TIER_RESULTS.csv",
+      "field": "recall",
+      "decimals": 2,
+      "percent": true,
+      "display": "76.73%"
+    },
+    {
+      "model": "YOLO11s-Seg",
+      "source": "metrics/TIER_RESULTS.csv",
+      "field": "inference_ms_mean",
+      "decimals": 3,
+      "percent": false,
+      "display": "15.693"
+    },
+    {
+      "model": "YOLO11s-Seg",
+      "source": "metrics/TIER_RESULTS.csv",
+      "field": "pipeline_ms_mean",
+      "decimals": 3,
+      "percent": false,
+      "display": "88.836"
+    },
+    {
+      "model": "YOLO11s-Seg",
+      "source": "metrics/TIER_RESULTS.csv",
+      "field": "peak_allocated_vram_mib",
+      "decimals": 2,
+      "percent": false,
+      "display": "1007.50"
+    },
+    {
+      "model": "YOLOv8s-Seg",
+      "source": "metrics/TIER_RESULTS.csv",
+      "field": "inference_ms_mean",
+      "decimals": 3,
+      "percent": false,
+      "display": "15.220"
+    },
+    {
+      "model": "YOLOv8s-Seg",
+      "source": "metrics/TIER_RESULTS.csv",
+      "field": "recall",
+      "decimals": 2,
+      "percent": true,
+      "display": "76.73%"
+    },
+    {
+      "model": "YOLOv8s-Seg",
+      "source": "metrics/TIMING_SUMMARY.csv",
+      "stage": "postprocessing",
+      "field": "mean_ms",
+      "decimals": 3,
+      "percent": false,
+      "display": "75.255"
+    },
+    {
+      "model": "YOLOv8s-Seg",
+      "source": "metrics/TIER_RESULTS.csv",
+      "field": "pipeline_ms_mean",
+      "decimals": 3,
+      "percent": false,
+      "display": "92.173"
+    },
+    {
+      "model": "YOLOv8s-Seg",
+      "source": "metrics/TIER_RESULTS.csv",
+      "field": "peak_allocated_vram_mib",
+      "decimals": 2,
+      "percent": false,
+      "display": "1139.01"
+    },
+    {
+      "model": "YOLOv8s-Seg",
+      "source": "metrics/TIER_RESULTS.csv",
+      "field": "inference_ms_mean",
+      "decimals": 3,
+      "percent": false,
+      "display": "15.220"
+    },
+    {
+      "model": "YOLO26s-Seg",
+      "source": "metrics/TIER_RESULTS.csv",
+      "field": "pipeline_ms_mean",
+      "decimals": 3,
+      "percent": false,
+      "display": "78.828"
+    },
+    {
+      "model": "YOLO26s-Seg",
+      "source": "metrics/TIMING_SUMMARY.csv",
+      "stage": "postprocessing",
+      "field": "mean_ms",
+      "decimals": 3,
+      "percent": false,
+      "display": "59.810"
+    },
+    {
+      "model": "YOLO11s-Seg",
+      "source": "metrics/TIMING_SUMMARY.csv",
+      "stage": "postprocessing",
+      "field": "mean_ms",
+      "decimals": 3,
+      "percent": false,
+      "display": "71.443"
+    },
+    {
+      "model": "YOLOv8s-Seg",
+      "source": "metrics/TIMING_SUMMARY.csv",
+      "stage": "postprocessing",
+      "field": "mean_ms",
+      "decimals": 3,
+      "percent": false,
+      "display": "75.255"
+    }
+  ],
+  "measurements_changed": false,
+  "inference_run": false,
+  "warning_evidence": "NNPACK in runner_console.log; no DeprecationWarning in Small run logs"
+}
