@@ -20,3 +20,8 @@ timing/**/all_frames.csv
 timing/**/round*.csv
 outputs/visualizations/
 # Intentionally retained canonical plots and evaluation summaries are versioned.
+
+# Transient runner state and detailed timing telemetry remain local.
+manifests/SMALL_ACTIVE_RUN.json
+timing/**/round*.json
+timing/**/attempts/
