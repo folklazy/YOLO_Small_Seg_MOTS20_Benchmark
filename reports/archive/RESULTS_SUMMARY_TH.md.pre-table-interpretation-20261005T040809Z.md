@@ -2,7 +2,7 @@
 
 <!-- COMPACT QUANTITATIVE SUMMARY. After COMPLETE + validated canonical CSV only.
 For NOT_RUN, retain headings and empty tables; state pending instead of inventing winners.
-Include concise per-model table interpretation after validation; no visual case analysis. -->
+Do not add per-model essays or visual case analysis. -->
 
 ## สรุปใน 1 นาที
 
@@ -16,22 +16,6 @@ pipeline speed winners; lowest allocated VRAM; largest measured trade-off. -->
 | Model | Mask mAP50-95 | AP75 | Recall | Inference ms | Pipeline ms | FPS | Peak VRAM MiB |
 |---|---|---|---|---|---|---|---|
 <!-- One canonical table, fixed family order. AP/Recall 6 decimals; ms/FPS 3; MiB 2. -->
-
-## สรุปผลจากตาราง
-
-ยังไม่รัน (NOT_RUN) — รอผลครบทั้งสามโมเดลก่อนสรุปจุดเด่น สิ่งที่แลก และ candidate
-
-### YOLO26s-Seg
-
-ยังไม่มีค่าที่วัด จึงยังสรุป accuracy, latency, VRAM หรือเปรียบเทียบกับโมเดลอื่นไม่ได้
-
-### YOLO11s-Seg
-
-ยังไม่มีค่าที่วัด จึงยังสรุป accuracy, latency, VRAM หรือเปรียบเทียบกับโมเดลอื่นไม่ได้
-
-### YOLOv8s-Seg
-
-ยังไม่มีค่าที่วัด จึงยังสรุป accuracy, latency, VRAM หรือเปรียบเทียบกับโมเดลอื่นไม่ได้
 
 ## Winner ของแต่ละด้าน
 
