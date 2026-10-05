@@ -18,7 +18,12 @@ metrics/gt_frames.csv
 metrics/gt_instances.csv
 timing/**/all_frames.csv
 timing/**/round*.csv
-outputs/visualizations/
+outputs/visualizations/*
+!outputs/visualizations/qualitative/
+outputs/visualizations/qualitative/*
+!outputs/visualizations/qualitative/case_0[1-4]_comparison.png
+!outputs/visualizations/qualitative/CASE_SELECTION.md
+!outputs/visualizations/qualitative/CASE_EVIDENCE.json
 # Intentionally retained canonical plots and evaluation summaries are versioned.
 
 # Transient runner state and detailed timing telemetry remain local.

@@ -4,8 +4,6 @@
 
 Pretrained YOLO Person instance segmentation on MOTS20 using the frozen study protocol. Three Small checkpoints were evaluated without training, fine-tuning or adaptation. This is frame-level segmentation, not MOTS tracking.
 
-[PRESENTATION_SUMMARY_TH.md](PRESENTATION_SUMMARY_TH.md) now follows the shared visual-analysis format, with four same-frame MOTS20 cases reconstructed from saved predictions. The numerical summary remains in [RESULTS_SUMMARY_TH.md](RESULTS_SUMMARY_TH.md). No inference was rerun.
-
 ## Models
 
 | Family | Model | Tier |

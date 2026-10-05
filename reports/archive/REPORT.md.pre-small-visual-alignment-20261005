@@ -107,4 +107,4 @@ Lossless per-frame RLE predictions and full telemetry remain local under predict
 
 ## Qualitative Analysis
 
-Four same-frame diagnostic comparisons reconstructed from saved lossless predictions are discussed in [PRESENTATION_SUMMARY_TH.md](PRESENTATION_SUMMARY_TH.md). See [case selection](outputs/visualizations/qualitative/CASE_SELECTION.md) for sampling reasons and limitations. No inference or measured values were changed for this documentation update.
+Saved lossless predictions support later qualitative reconstruction. This request uses the explicit presentation heading structure; no additional inference is needed.

@@ -1,21 +1,21 @@
 {
   "timestamp": "2026-10-05T06:39:03.374916+00:00",
   "status": "PASS",
-  "numeric_table_cells_verified": 135,
+  "numeric_table_cells_verified": 105,
   "canonical_heading_order": "PASS",
   "local_links": "PASS",
-  "presentation_policy": "Neutral tier summary; no mentor-specific closing section, per explicit Small user instruction.",
+  "presentation_policy": "Shared Visual and Qualitative Analysis format per latest user request; original numerical profile is archived.",
   "document_sha256": {
-    "README.md": "4370074c5aac888563e2be4ff89fcfb8e3f74b11ce026e5552a8e880837a8671",
-    "REPORT.md": "6553943b5347f9abfb563fc567532cf0ddb024164f7e904a4b397afad3d1d7fd",
+    "README.md": "c336743f8d4a6b9a955176421d8d98d45ca0d91ee4be666771f53e420277bf0b",
+    "REPORT.md": "54c723520d0b60bc585ad185c548b151b8a439ab86a6cb4e2f41c66f18597d84",
     "RESULTS_SUMMARY_TH.md": "0590b468fcfa94e8e72a1ec39c56cb1f55fee8d9983a566eda518091826b9125",
-    "PRESENTATION_SUMMARY_TH.md": "d70cbaf424880e31fd1476244af4a9bb5a941481c7bc4c2eddaff22d03eca71e"
+    "PRESENTATION_SUMMARY_TH.md": "2c6bb1ed26a9c4d09d73879379dcc47d0633679ea7545cf70bfc9abbac685f90"
   },
   "template_sha256": {
     "TIER_RESULTS_SUMMARY_TH_TEMPLATE.md": "7fb95391289273ea9d1df5378b79d2d6cd1ddaddd7b18062a06a48647b56ac59",
     "TIER_README_TEMPLATE.md": "9c72ee2b3182859543a8a0c70ed2965e6a66805d3302c4cf35257a89cf0553a8",
-    "TIER_PRESENTATION_SUMMARY_TH_TEMPLATE.md": "ee5fa4956f74fdd57405fd61ed02faac83f685a408ad5f2b2ac5362d8c5c181f",
+    "TIER_PRESENTATION_SUMMARY_TH_TEMPLATE.md": "ebba8e782b5278374966ec286939540f26fe570218859551763f46790e7a73b0",
     "TIER_REPORT_TEMPLATE.md": "accf2d11ecf99c6fc589f9fd872bb8488f79030d3abac7a24e6d531362c38e19"
   },
-  "final_editorial_review": "Canonical table values unchanged; interpretations refined from TIER_RESULTS, PER_SEQUENCE_RESULTS and TIMING_SUMMARY; warning claims checked against Small logs."
+  "final_editorial_review": "Four inspected same-frame cases from saved predictions; all current numerical table cells checked against unchanged canonical CSV."
 }
