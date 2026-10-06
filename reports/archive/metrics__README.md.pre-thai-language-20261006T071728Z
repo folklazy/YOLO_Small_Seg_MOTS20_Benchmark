@@ -1,0 +1,1 @@
+Header-only canonical interfaces: NOT_RUN. No benchmark results are present. Use [Master schema](https://github.com/folklazy/YOLO_Instance_Segmentation_MOTS20_Scaling_Study/blob/main/DATA_SCHEMA.md). Never add placeholders for untested models.
