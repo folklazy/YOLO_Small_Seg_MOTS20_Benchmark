@@ -1,0 +1,179 @@
+{
+  "timestamp": "2026-10-06T03:16:10.634515+00:00",
+  "status": "PASS",
+  "active_results_profile": "shared-compact-quantitative",
+  "archives": [
+    {
+      "original": "RESULTS_SUMMARY_TH.md",
+      "archive": "reports/archive/RESULTS_SUMMARY_TH.md.pre-small-quantitative-alignment-20261006",
+      "sha256": "0590b468fcfa94e8e72a1ec39c56cb1f55fee8d9983a566eda518091826b9125"
+    },
+    {
+      "original": "configs/report_templates/TIER_RESULTS_SUMMARY_TH_TEMPLATE.md",
+      "archive": "reports/archive/configs__report_templates__TIER_RESULTS_SUMMARY_TH_TEMPLATE.md.pre-small-quantitative-alignment-20261006",
+      "sha256": "7fb95391289273ea9d1df5378b79d2d6cd1ddaddd7b18062a06a48647b56ac59"
+    },
+    {
+      "original": "manifests/DOCUMENT_VALIDATION.json",
+      "archive": "reports/archive/manifests__DOCUMENT_VALIDATION.json.pre-small-quantitative-alignment-20261006",
+      "sha256": "c0059a98cd1c0610585d0b22a698d250ac77085b2d3054f0276fdb599b0953ba"
+    }
+  ],
+  "unchanged_artifact_sha256": {
+    "YOLO_Large_Seg_MOTS20_Benchmark/metrics/comparison_summary.csv": "5986db7f575ed1ad21097ae51c3945cad7cc19de14fd50f26e12e53a18235d36",
+    "YOLO_Large_Seg_MOTS20_Benchmark/metrics/MODEL_COMPLEXITY.csv": "f02f14e86b749066d346921dda54836abe9a46ac95eb3f4e53faef2264b26b6e",
+    "YOLO_Large_Seg_MOTS20_Benchmark/metrics/per_sequence.csv": "062f2cdfd40200d953d4470e751cd2157b80f546edb8bc9e3111e3ce54f6a9e3",
+    "YOLO_Large_Seg_MOTS20_Benchmark/metrics/PREFLIGHT_MAXDET.csv": "80afa34f4007df195b180ef9984537913ea976d634e4c1f412686d331b13fbc1",
+    "YOLO_Large_Seg_MOTS20_Benchmark/metrics/preflight_maxdet.csv": "d418bd4c6e1da0b13d465f805c875319e4bacc147e8aad9b2145da5093b1b453",
+    "YOLO_Large_Seg_MOTS20_Benchmark/metrics/PER_SEQUENCE_RESULTS.csv": "8035f8d778f3b288442936f9010413ef31e3a18feb2b97c3b77608261ac7a6ae",
+    "YOLO_Large_Seg_MOTS20_Benchmark/metrics/TIMING_SUMMARY.csv": "654f1385efd7ed3715b4a7f745038fb6f2b4db7e73095c20d4be69e743d75e6b",
+    "YOLO_Large_Seg_MOTS20_Benchmark/metrics/gt_frames.csv": "953d433368f104e5abd2e2e56fa903ebee7213eb5a35ad08ad0436d303e06c08",
+    "YOLO_Large_Seg_MOTS20_Benchmark/metrics/gt_instances.csv": "7e172467bba7a38831932f840c6c5b25f862bbf70c60144645b9863cc77414f5",
+    "YOLO_Large_Seg_MOTS20_Benchmark/metrics/per_model.csv": "23a1241af6bb7c53257dc7a9a98f99a03ed9d657f0d2713e5c5bf81bdd057fcc",
+    "YOLO_Large_Seg_MOTS20_Benchmark/metrics/TIER_RESULTS.csv": "8d4d273ad11661eea7d5c36788c6a59b2085e481604bc6be4bef6359e1093093",
+    "YOLO_Large_Seg_MOTS20_Benchmark/metrics/protocol_consistency.csv": "601d5e24edaf8f766a0a38218ed9ae051d75074b9dd9477e78957671f01af522",
+    "YOLO_Second_Largest_Seg_MOTS20_Benchmark/metrics/comparison_summary.csv": "768c483db9d70818500d4166b9bde41a4a1fb88da88fc94896507e8bcd0d1022",
+    "YOLO_Second_Largest_Seg_MOTS20_Benchmark/metrics/MODEL_COMPLEXITY.csv": "c5cb5074499e5602529bfaf91f784fb46c5880ad372fbe75c9e9a173366e4164",
+    "YOLO_Second_Largest_Seg_MOTS20_Benchmark/metrics/per_sequence.csv": "21b4e63c9c2efa825b85926282e9b31d11dfa777c478262253c913c714709806",
+    "YOLO_Second_Largest_Seg_MOTS20_Benchmark/metrics/PREFLIGHT_MAXDET.csv": "85b8e0e52152c20dd46d409f384047494fc8d7423159cd316ff1b1381f216142",
+    "YOLO_Second_Largest_Seg_MOTS20_Benchmark/metrics/preflight_maxdet.csv": "5b9c045aef70b71fb0ba5c97527aa65a87a0eef56474be375338fdd38e3a26bd",
+    "YOLO_Second_Largest_Seg_MOTS20_Benchmark/metrics/PER_SEQUENCE_RESULTS.csv": "55032e238afdc76c1ade8f638512947f40a7bf572f991447745b26eef625b3f5",
+    "YOLO_Second_Largest_Seg_MOTS20_Benchmark/metrics/TIMING_SUMMARY.csv": "a376d068508a074992ee8a98b6d6af66d97cb896b26a65f99a472100803ea74b",
+    "YOLO_Second_Largest_Seg_MOTS20_Benchmark/metrics/gt_frames.csv": "953d433368f104e5abd2e2e56fa903ebee7213eb5a35ad08ad0436d303e06c08",
+    "YOLO_Second_Largest_Seg_MOTS20_Benchmark/metrics/gt_instances.csv": "7e172467bba7a38831932f840c6c5b25f862bbf70c60144645b9863cc77414f5",
+    "YOLO_Second_Largest_Seg_MOTS20_Benchmark/metrics/per_model.csv": "75c7fb311a37f7b83e25e0b7721bdd70ebfb2ea37bb5f48d3b8811d8fb479b45",
+    "YOLO_Second_Largest_Seg_MOTS20_Benchmark/metrics/TIER_RESULTS.csv": "41d41b139038f3ce6d6c0cd1795be2839c102490bd9b18c7e2aaf936d99d1a01",
+    "YOLO_Second_Largest_Seg_MOTS20_Benchmark/metrics/protocol_consistency.csv": "c015b8cb541fbce3f40a3776b88cd44c827c39b3e0a5fe744ddc92e6c5ef5e55",
+    "YOLO_Medium_Seg_MOTS20_Benchmark/metrics/MODEL_COMPLEXITY.csv": "249b94caa328d4f9cd2b45a5ac2ea14f732d4709c8f0d00325bebed1bde8700d",
+    "YOLO_Medium_Seg_MOTS20_Benchmark/metrics/PREFLIGHT_MAXDET.csv": "bc1c6419e8a982aa4aaf7d6e173e00114ed0e783e4acf13eb53e3cefe4f27441",
+    "YOLO_Medium_Seg_MOTS20_Benchmark/metrics/PER_SEQUENCE_RESULTS.csv": "4476ae284a0dc833f3b826ff697ec67f5938b38698391117bf4be195651749a0",
+    "YOLO_Medium_Seg_MOTS20_Benchmark/metrics/TIMING_SUMMARY.csv": "4482a4a491a7ca9733b80b718de7b857bc5e5e7cc4f1804ca296c3678403ba92",
+    "YOLO_Medium_Seg_MOTS20_Benchmark/metrics/gt_frames.csv": "953d433368f104e5abd2e2e56fa903ebee7213eb5a35ad08ad0436d303e06c08",
+    "YOLO_Medium_Seg_MOTS20_Benchmark/metrics/gt_instances.csv": "7e172467bba7a38831932f840c6c5b25f862bbf70c60144645b9863cc77414f5",
+    "YOLO_Medium_Seg_MOTS20_Benchmark/metrics/TIER_RESULTS.csv": "5e354e3d8d6fdef38f96b31dd03acbd7730549e8beac5c58929f128593d29b65",
+    "YOLO_Small_Seg_MOTS20_Benchmark/metrics/MODEL_COMPLEXITY.csv": "296be79fcf600c4430fc112da653b218de2c8c25e7cc092340cbf420507bd24d",
+    "YOLO_Small_Seg_MOTS20_Benchmark/metrics/PREFLIGHT_MAXDET.csv": "53822b1e37685a0e3af248ab6545291d1fe2a0de511f1884ec60495271e4cebb",
+    "YOLO_Small_Seg_MOTS20_Benchmark/metrics/PER_SEQUENCE_RESULTS.csv": "f3f26f2b33a39ae3c8d0e6b8e3ece67dea583e3918fc8ce44d26ba3a7049edc0",
+    "YOLO_Small_Seg_MOTS20_Benchmark/metrics/TIMING_SUMMARY.csv": "8caa06dffcc9a37017a0b82c60f1c03e24d527c1898929e7fbc717309c18f58a",
+    "YOLO_Small_Seg_MOTS20_Benchmark/metrics/gt_frames.csv": "953d433368f104e5abd2e2e56fa903ebee7213eb5a35ad08ad0436d303e06c08",
+    "YOLO_Small_Seg_MOTS20_Benchmark/metrics/gt_instances.csv": "7e172467bba7a38831932f840c6c5b25f862bbf70c60144645b9863cc77414f5",
+    "YOLO_Small_Seg_MOTS20_Benchmark/metrics/TIER_RESULTS.csv": "36ea47db9225ffd91aa77c45313ccb858a7bdb8ad5f442fa62d97afe3ca0d4b5",
+    "YOLO_Nano_Seg_MOTS20_Benchmark/metrics/MODEL_COMPLEXITY.csv": "e92c637181f3c315df05d27e00aed1d7dfe4c1f63d6c67465c7f3d46620eb6eb",
+    "YOLO_Nano_Seg_MOTS20_Benchmark/metrics/PREFLIGHT_MAXDET.csv": "5621d9406595d238fb3a4e8a583fbd1c66eeac058453728045e108012d6e83b8",
+    "YOLO_Nano_Seg_MOTS20_Benchmark/metrics/PER_SEQUENCE_RESULTS.csv": "c911ae136ecd5b91b06c170fce7348444ec6b8ffa2b61cd675c12b408082249d",
+    "YOLO_Nano_Seg_MOTS20_Benchmark/metrics/TIMING_SUMMARY.csv": "73526e2a145033ce6d008c32f5855414da6a2c7549cdd6ed7a826fcde0de94ec",
+    "YOLO_Nano_Seg_MOTS20_Benchmark/metrics/gt_frames.csv": "953d433368f104e5abd2e2e56fa903ebee7213eb5a35ad08ad0436d303e06c08",
+    "YOLO_Nano_Seg_MOTS20_Benchmark/metrics/gt_instances.csv": "7e172467bba7a38831932f840c6c5b25f862bbf70c60144645b9863cc77414f5",
+    "YOLO_Nano_Seg_MOTS20_Benchmark/metrics/TIER_RESULTS.csv": "a1562e54263b2c8e4e13630d3cf1c6e3f45659e92dc57285cf902b6fe1126787",
+    "YOLO_Large_Seg_MOTS20_Benchmark/RESULTS_SUMMARY_TH.md": "d2eca3c5389eef711b4609f5f9f6cdce405e309f2dae6bdacf0135c48585ef56",
+    "YOLO_Large_Seg_MOTS20_Benchmark/PRESENTATION_SUMMARY_TH.md": "5690be55f475f2100a5409753cc6cec41633e2358a030648e35a5115acf69489",
+    "YOLO_Large_Seg_MOTS20_Benchmark/BENCHMARK_INSIGHTS_TH.md": "abf4a21dd887b0d8ae6d70110cd69eba4782b7d9a1a0800583e44be1fe8642c8",
+    "YOLO_Large_Seg_MOTS20_Benchmark/REPORT.md": "e2d99188f90d016645cb6339617c8154be45a4c6e839fa4a32aea6c2a70e2eed",
+    "YOLO_Large_Seg_MOTS20_Benchmark/EXPERIMENT_PROTOCOL.md": "465a6e60b371b29f250eeb8bb5ac4c218be20f114e9e42f7979e5d45aca19366",
+    "YOLO_Large_Seg_MOTS20_Benchmark/README.md": "02bf41ff529c8321cc593923d842ae9e5236afc9631cfa3ff024accf76fd68fb",
+    "YOLO_Second_Largest_Seg_MOTS20_Benchmark/RESULTS_SUMMARY_TH.md": "ce6b531d2f6d850a25b7b1aa09b942131fe80466610259ba763234289a178c63",
+    "YOLO_Second_Largest_Seg_MOTS20_Benchmark/PRESENTATION_SUMMARY_TH.md": "9843746fd77287f7c5e70c05f44fd9dd02facdbe7cb95d4cd94b5a2d7b96a388",
+    "YOLO_Second_Largest_Seg_MOTS20_Benchmark/BENCHMARK_INSIGHTS_TH.md": "40cbe9fc375f6f24700b5c48d4327c56fbd5a73323f9ce4fdbb90a8fa52fd655",
+    "YOLO_Second_Largest_Seg_MOTS20_Benchmark/REPORT.md": "30c729c9b7aca78782e1706db1490654a46d63585f0f1e7194a4f18763556f0c",
+    "YOLO_Second_Largest_Seg_MOTS20_Benchmark/EXPERIMENT_PROTOCOL.md": "4552a44160fa66ac058756ed55d8b25d750429b52aa529e9441710dfffdd5a45",
+    "YOLO_Second_Largest_Seg_MOTS20_Benchmark/README.md": "474ec8f96af46d7fc101273154f2617610ad35b13af7ac3b86a1f753eb73045c",
+    "YOLO_Medium_Seg_MOTS20_Benchmark/RESULTS_SUMMARY_TH.md": "bf2c2956cb6a492b7717c2a166d2c6ced836e6ea5b41ab22bf341a8e06a18834",
+    "YOLO_Medium_Seg_MOTS20_Benchmark/PRESENTATION_SUMMARY_TH.md": "31672fa617456eb8eb8cf229301905dbf1992769ac74231e1bdcc1c24c7b238f",
+    "YOLO_Medium_Seg_MOTS20_Benchmark/REPORT.md": "189e5316ad2e6ca11ac1025b82fa2067d767153a263d89e99f455e39e311e473",
+    "YOLO_Medium_Seg_MOTS20_Benchmark/EXPERIMENT_PROTOCOL.md": "3d095a8dac90b21e4e5af978e355c2d3f5c45749dfd212446c3ef647be20c5c7",
+    "YOLO_Medium_Seg_MOTS20_Benchmark/README.md": "f5f8c28467aa0c97a946935b1ebc7240d920de9cbebbb534431861c5a9449c1f",
+    "YOLO_Nano_Seg_MOTS20_Benchmark/RESULTS_SUMMARY_TH.md": "9efc93b7868c18ca01d8b1241925dfb63e6ac53a1ad43696192dc5db47f90115",
+    "YOLO_Nano_Seg_MOTS20_Benchmark/PRESENTATION_SUMMARY_TH.md": "16dace6a07014f243b6c8c063eda7a7c75c2805f479a971af06ce59e67b506a2",
+    "YOLO_Nano_Seg_MOTS20_Benchmark/REPORT.md": "aee4afc6086556917344a9244a26156dcc872f4257f8986f7161b47730fd8820",
+    "YOLO_Nano_Seg_MOTS20_Benchmark/EXPERIMENT_PROTOCOL.md": "2285e4615b32df4a6f902a0da30fcf09aa590ede07d31677c485538c232d9afb",
+    "YOLO_Nano_Seg_MOTS20_Benchmark/README.md": "05202c7f143934fa41de3fcbeaf3be7f35f3946abb28bc5c0caf1d5b334ab0e8",
+    "YOLO_Small_Seg_MOTS20_Benchmark/PRESENTATION_SUMMARY_TH.md": "2c6bb1ed26a9c4d09d73879379dcc47d0633679ea7545cf70bfc9abbac685f90",
+    "YOLO_Small_Seg_MOTS20_Benchmark/REPORT.md": "54c723520d0b60bc585ad185c548b151b8a439ab86a6cb4e2f41c66f18597d84",
+    "YOLO_Small_Seg_MOTS20_Benchmark/README.md": "c336743f8d4a6b9a955176421d8d98d45ca0d91ee4be666771f53e420277bf0b",
+    "YOLO_Small_Seg_MOTS20_Benchmark/EXPERIMENT_PROTOCOL.md": "92c50d02bd4209afc6923197f674cbc1149f5a10b6da521fe16224652a0dc5c0",
+    "YOLO_Small_Seg_MOTS20_Benchmark/manifests/STANDARDIZATION.json": "7f7ad80d11887adbb92eaafc61ac3fc6d69b27227dd0cb05c57270b3267f5bc3"
+  },
+  "results_sha256": "38f4d73442c85e9ceaae874fe82ee000598e84bf9bdaa776007d69451bb07acb",
+  "template_sha256": "f98092fb2756b04fe4b227ab69163eadf150446f6a3ad8aae8b05a6fab35e6a0",
+  "numeric_table_cells_verified": 105,
+  "delta_claims": [
+    {
+      "field": "mask_map50_95",
+      "left_model": "YOLO26s-Seg",
+      "right_model": "YOLO11s-Seg",
+      "decimals": 6,
+      "display": "0.053371"
+    },
+    {
+      "field": "mask_map50_95",
+      "left_model": "YOLO11s-Seg",
+      "right_model": "YOLOv8s-Seg",
+      "decimals": 6,
+      "display": "0.000505"
+    },
+    {
+      "field": "inference_ms_mean",
+      "left_model": "YOLO26s-Seg",
+      "right_model": "YOLOv8s-Seg",
+      "decimals": 3,
+      "display": "2.088"
+    },
+    {
+      "field": "pipeline_ms_mean",
+      "left_model": "YOLOv8s-Seg",
+      "right_model": "YOLO26s-Seg",
+      "decimals": 3,
+      "display": "13.345"
+    },
+    {
+      "field": "peak_allocated_vram_mib",
+      "left_model": "YOLO11s-Seg",
+      "right_model": "YOLO26s-Seg",
+      "decimals": 2,
+      "display": "134.82"
+    },
+    {
+      "field": "peak_allocated_vram_mib",
+      "left_model": "YOLOv8s-Seg",
+      "right_model": "YOLO26s-Seg",
+      "decimals": 2,
+      "display": "266.34"
+    }
+  ],
+  "inference_rerun": false,
+  "measured_values_changed": false,
+  "presentation_changed": false,
+  "validation_summary": {
+    "documentation_status": "PASS",
+    "tiers": [
+      {
+        "tier": "Large",
+        "status": "PASS",
+        "cases": 4
+      },
+      {
+        "tier": "Second_Largest",
+        "status": "PASS",
+        "cases": 4
+      },
+      {
+        "tier": "Medium",
+        "status": "PASS",
+        "cases": 4
+      },
+      {
+        "tier": "Small",
+        "status": "PASS",
+        "cases": 4
+      },
+      {
+        "tier": "Nano",
+        "status": "PASS",
+        "cases": 4
+      }
+    ],
+    "existing_measured_values_changed": false,
+    "inference_rerun": false,
+    "embedded_images_checked": 28
+  }
+}
