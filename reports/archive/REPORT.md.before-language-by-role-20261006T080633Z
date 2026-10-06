@@ -58,15 +58,14 @@ Preprocessing compatibility: PASS
 | Highest FPS | YOLO26s-Seg | 12.686 |
 | Lowest VRAM | YOLO26s-Seg | 872.67 |
 
-Inference and pipeline latency are in ms/frame; FPS is derived from mean pipeline latency; VRAM is peak allocated MiB.
 
 ## 6. Key Findings
 
-- Observation: YOLO26s-Seg has the highest Mask mAP50-95, 0.536640; the gap to the runner-up is 0.053371 on the 0–1 scale.
-- Observation: YOLO26s-Seg leads both AP75 and Recall.
-- Observation: the fastest forward pass is from YOLOv8s-Seg; the fastest pipeline and highest FPS are from YOLO26s-Seg; the lowest VRAM is from YOLO26s-Seg.
-- Closest pair in Mask mAP50-95: YOLO11s-Seg / YOLOv8s-Seg differ by 0.000505 — near-tied descriptively; statistical significance was not tested.
-- Interpretation: selection must distinguish accuracy, forward latency, pipeline latency and memory; fewer parameters do not necessarily mean lower latency or VRAM.
+- Observation: YOLO26s-Seg มี Mask mAP50-95 สูงสุด 0.536640; ห่างอันดับถัดไป 0.053371 บนสเกล 0–1
+- Observation: YOLO26s-Seg นำ AP75 และ YOLO26s-Seg นำ Recall
+- Observation: forward เร็วสุดคือ YOLOv8s-Seg, pipeline เร็วสุดและ FPS สูงสุดคือ YOLO26s-Seg, VRAM ต่ำสุดคือ YOLO26s-Seg
+- คู่ที่ใกล้ที่สุดด้าน Mask mAP50-95: YOLO11s-Seg / YOLOv8s-Seg ต่าง 0.000505 — near-tied descriptively; ไม่ได้ทดสอบ statistical significance
+- Interpretation: การเลือกต้องแยก accuracy, forward, pipeline และ memory ไม่สรุปว่า parameters ต่ำกว่าจะเร็วหรือใช้ VRAM ต่ำกว่าเสมอ
 
 ## 7. Per-sequence Observations
 
@@ -77,8 +76,8 @@ Inference and pipeline latency are in ms/frame; FPS is derived from mean pipelin
 
 ## 8. Efficiency and Resource Observations
 
-- Closest pair in mean inference latency: YOLO11s-Seg / YOLOv8s-Seg differ by 0.473 ms; statistical significance was not tested.
-- Closest pair in mean pipeline latency: YOLO11s-Seg / YOLOv8s-Seg differ by 3.337 ms; statistical significance was not tested.
+- คู่ที่ใกล้ที่สุดด้าน inference mean: YOLO11s-Seg / YOLOv8s-Seg ต่าง 0.473 ms; ไม่ได้ทดสอบ statistical significance
+- คู่ที่ใกล้ที่สุดด้าน pipeline mean: YOLO11s-Seg / YOLOv8s-Seg ต่าง 3.337 ms; ไม่ได้ทดสอบ statistical significance
 
 YOLO26s-Seg has the lowest peak allocated VRAM. Loaded/fused parameters, GFLOPs and separate load times are retained in MODEL_COMPLEXITY.csv. Peak reserved VRAM is preserved in [source timing summary](timing/benchmark-20261005T051531Z/clean_repetition/summary.csv). Separate RLE preparation means: yolo26s-seg.pt: 279.956 ms; yolo11s-seg.pt: 330.744 ms; yolov8s-seg.pt: 344.705 ms.
 
@@ -88,11 +87,7 @@ CPU NNPACK unsupported-hardware warnings were captured in this Small run. No pyc
 
 ## 10. Limitations
 
-This evaluates frame-level Person instance segmentation on MOTS20, rather than MOTS tracking. The 26,894 GT instances are frame-level annotations, not unique people. TP-only IoU/Dice are conditional on successful matching.
-
-Consecutive video frames are correlated, and no statistical significance test was performed; small differences are descriptive. Selected qualitative cases do not replace dataset-level metrics.
-
-These measurements do not establish robustness to blur, low light, camera angle or occlusion severity, or deployment suitability. They support candidate selection for later CCTV robustness evaluation only. No weighted score or architectural causal conclusion is used.
+ผลนี้เป็น Person instance segmentation รายเฟรมบน MOTS20 ไม่ใช่ MOTS tracking; 26,894 GT instances เป็น annotation รายเฟรม ไม่ใช่จำนวนคนไม่ซ้ำ TP-only IoU/Dice พิจารณาเฉพาะคู่ที่ match ได้ ภาพต่อเนื่องสัมพันธ์กันและไม่มีการทดสอบ statistical significance ผลยังไม่ยืนยัน blur, low-light, มุมกล้อง, ระดับ occlusion หรือ deployment suitability จึงใช้เพื่อเลือก candidate for later CCTV robustness evaluation เท่านั้น
 
 ## 11. Reproducibility and Source Artifacts
 
@@ -108,8 +103,8 @@ Lossless per-frame RLE predictions and full telemetry remain local under predict
 
 ## 12. Relation to Full Scaling Study
 
-[Master Study](https://github.com/folklazy/YOLO_Instance_Segmentation_MOTS20_Scaling_Study) — this is the Small tier only. All five tiers are complete; final 17-model synthesis remains pending and requires explicit authorization.
+[Master Study](https://github.com/folklazy/YOLO_Instance_Segmentation_MOTS20_Scaling_Study) — Small only. Nano and final Master synthesis were not run.
 
 ## Qualitative Analysis
 
-Four same-frame diagnostic comparisons from saved lossless predictions are discussed in [PRESENTATION_SUMMARY_TH.md](PRESENTATION_SUMMARY_TH.md). See [current case selection](outputs/visualizations/qualitative/selection_v2/CASE_SELECTION.md) and [active selection](manifests/QUALITATIVE_SELECTION.json) for selection reasons, shared and tier-specific behaviors, and evidence limits. Comparisons use original MOTS20 frames. No inference or measured values were changed for this documentation update.
+Four same-frame diagnostic comparisons reconstructed from saved lossless predictions are discussed in [PRESENTATION_SUMMARY_TH.md](PRESENTATION_SUMMARY_TH.md). See [case selection](outputs/visualizations/qualitative/CASE_SELECTION.md) for sampling reasons and limitations. No inference or measured values were changed for this documentation update.
