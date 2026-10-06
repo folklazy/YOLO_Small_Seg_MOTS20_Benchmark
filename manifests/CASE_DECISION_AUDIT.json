@@ -1,0 +1,382 @@
+{
+  "timestamp": "2026-10-06T04:10:10.772855+00:00",
+  "status": "PASS_WITH_LIMITATIONS",
+  "cases_inspected": 4,
+  "pool_frames_rechecked": 12,
+  "selection_replaced": false,
+  "inference_rerun": false,
+  "measured_values_changed": false,
+  "archives": [
+    {
+      "original": "PRESENTATION_SUMMARY_TH.md",
+      "archive": "reports/archive/PRESENTATION_SUMMARY_TH.md.pre-case-decision-review-20261006",
+      "sha256": "2c6bb1ed26a9c4d09d73879379dcc47d0633679ea7545cf70bfc9abbac685f90"
+    },
+    {
+      "original": "outputs/visualizations/qualitative/CASE_SELECTION.md",
+      "archive": "reports/archive/outputs__visualizations__qualitative__CASE_SELECTION.md.pre-case-decision-review-20261006",
+      "sha256": "9c4ed6f305c483a52703e2f0608883290917815fed27a9de335adab8aadcccd9"
+    },
+    {
+      "original": "manifests/DOCUMENT_VALIDATION.json",
+      "archive": "reports/archive/manifests__DOCUMENT_VALIDATION.json.pre-case-decision-review-20261006",
+      "sha256": "722f7ea1e6bd705bf15b304c7126e2634aaede37d7c3f4b8600653ce1f51a4bf"
+    },
+    {
+      "original": "configs/report_templates/TIER_PRESENTATION_SUMMARY_TH_TEMPLATE.md",
+      "archive": "reports/archive/configs__report_templates__TIER_PRESENTATION_SUMMARY_TH_TEMPLATE.md.pre-case-decision-review-20261006",
+      "sha256": "ebba8e782b5278374966ec286939540f26fe570218859551763f46790e7a73b0"
+    }
+  ],
+  "canonical_metrics_sha256": {
+    "metrics/MODEL_COMPLEXITY.csv": "296be79fcf600c4430fc112da653b218de2c8c25e7cc092340cbf420507bd24d",
+    "metrics/PREFLIGHT_MAXDET.csv": "53822b1e37685a0e3af248ab6545291d1fe2a0de511f1884ec60495271e4cebb",
+    "metrics/PER_SEQUENCE_RESULTS.csv": "f3f26f2b33a39ae3c8d0e6b8e3ece67dea583e3918fc8ce44d26ba3a7049edc0",
+    "metrics/TIMING_SUMMARY.csv": "8caa06dffcc9a37017a0b82c60f1c03e24d527c1898929e7fbc717309c18f58a",
+    "metrics/gt_frames.csv": "953d433368f104e5abd2e2e56fa903ebee7213eb5a35ad08ad0436d303e06c08",
+    "metrics/gt_instances.csv": "7e172467bba7a38831932f840c6c5b25f862bbf70c60144645b9863cc77414f5",
+    "metrics/TIER_RESULTS.csv": "36ea47db9225ffd91aa77c45313ccb858a7bdb8ad5f442fa62d97afe3ca0d4b5"
+  },
+  "focus_evidence_sha256": "f7956a8cd7e021361444b0265e35aaf1cdf4ca9a541e9ef1c29cf49ef01c0c94",
+  "candidate_pool": [
+    {
+      "sequence": "MOTS20-02",
+      "frame": 1,
+      "models": [
+        {
+          "model": "YOLO26s-Seg",
+          "tp": 7,
+          "fp": 2,
+          "fn": 5
+        },
+        {
+          "model": "YOLO11s-Seg",
+          "tp": 7,
+          "fp": 0,
+          "fn": 5
+        },
+        {
+          "model": "YOLOv8s-Seg",
+          "tp": 6,
+          "fp": 2,
+          "fn": 6
+        }
+      ]
+    },
+    {
+      "sequence": "MOTS20-02",
+      "frame": 300,
+      "models": [
+        {
+          "model": "YOLO26s-Seg",
+          "tp": 10,
+          "fp": 1,
+          "fn": 2
+        },
+        {
+          "model": "YOLO11s-Seg",
+          "tp": 7,
+          "fp": 3,
+          "fn": 5
+        },
+        {
+          "model": "YOLOv8s-Seg",
+          "tp": 8,
+          "fp": 3,
+          "fn": 4
+        }
+      ]
+    },
+    {
+      "sequence": "MOTS20-02",
+      "frame": 600,
+      "models": [
+        {
+          "model": "YOLO26s-Seg",
+          "tp": 9,
+          "fp": 3,
+          "fn": 1
+        },
+        {
+          "model": "YOLO11s-Seg",
+          "tp": 10,
+          "fp": 1,
+          "fn": 0
+        },
+        {
+          "model": "YOLOv8s-Seg",
+          "tp": 10,
+          "fp": 1,
+          "fn": 0
+        }
+      ]
+    },
+    {
+      "sequence": "MOTS20-05",
+      "frame": 1,
+      "models": [
+        {
+          "model": "YOLO26s-Seg",
+          "tp": 2,
+          "fp": 0,
+          "fn": 3
+        },
+        {
+          "model": "YOLO11s-Seg",
+          "tp": 2,
+          "fp": 0,
+          "fn": 3
+        },
+        {
+          "model": "YOLOv8s-Seg",
+          "tp": 2,
+          "fp": 0,
+          "fn": 3
+        }
+      ]
+    },
+    {
+      "sequence": "MOTS20-05",
+      "frame": 419,
+      "models": [
+        {
+          "model": "YOLO26s-Seg",
+          "tp": 4,
+          "fp": 0,
+          "fn": 2
+        },
+        {
+          "model": "YOLO11s-Seg",
+          "tp": 4,
+          "fp": 0,
+          "fn": 2
+        },
+        {
+          "model": "YOLOv8s-Seg",
+          "tp": 3,
+          "fp": 1,
+          "fn": 3
+        }
+      ]
+    },
+    {
+      "sequence": "MOTS20-05",
+      "frame": 837,
+      "models": [
+        {
+          "model": "YOLO26s-Seg",
+          "tp": 8,
+          "fp": 0,
+          "fn": 1
+        },
+        {
+          "model": "YOLO11s-Seg",
+          "tp": 7,
+          "fp": 2,
+          "fn": 2
+        },
+        {
+          "model": "YOLOv8s-Seg",
+          "tp": 8,
+          "fp": 0,
+          "fn": 1
+        }
+      ]
+    },
+    {
+      "sequence": "MOTS20-09",
+      "frame": 1,
+      "models": [
+        {
+          "model": "YOLO26s-Seg",
+          "tp": 6,
+          "fp": 0,
+          "fn": 0
+        },
+        {
+          "model": "YOLO11s-Seg",
+          "tp": 6,
+          "fp": 1,
+          "fn": 0
+        },
+        {
+          "model": "YOLOv8s-Seg",
+          "tp": 6,
+          "fp": 0,
+          "fn": 0
+        }
+      ]
+    },
+    {
+      "sequence": "MOTS20-09",
+      "frame": 263,
+      "models": [
+        {
+          "model": "YOLO26s-Seg",
+          "tp": 9,
+          "fp": 2,
+          "fn": 4
+        },
+        {
+          "model": "YOLO11s-Seg",
+          "tp": 8,
+          "fp": 3,
+          "fn": 5
+        },
+        {
+          "model": "YOLOv8s-Seg",
+          "tp": 7,
+          "fp": 3,
+          "fn": 6
+        }
+      ]
+    },
+    {
+      "sequence": "MOTS20-09",
+      "frame": 525,
+      "models": [
+        {
+          "model": "YOLO26s-Seg",
+          "tp": 5,
+          "fp": 2,
+          "fn": 5
+        },
+        {
+          "model": "YOLO11s-Seg",
+          "tp": 5,
+          "fp": 2,
+          "fn": 5
+        },
+        {
+          "model": "YOLOv8s-Seg",
+          "tp": 5,
+          "fp": 2,
+          "fn": 5
+        }
+      ]
+    },
+    {
+      "sequence": "MOTS20-11",
+      "frame": 1,
+      "models": [
+        {
+          "model": "YOLO26s-Seg",
+          "tp": 10,
+          "fp": 1,
+          "fn": 4
+        },
+        {
+          "model": "YOLO11s-Seg",
+          "tp": 9,
+          "fp": 0,
+          "fn": 5
+        },
+        {
+          "model": "YOLOv8s-Seg",
+          "tp": 9,
+          "fp": 0,
+          "fn": 5
+        }
+      ]
+    },
+    {
+      "sequence": "MOTS20-11",
+      "frame": 450,
+      "models": [
+        {
+          "model": "YOLO26s-Seg",
+          "tp": 9,
+          "fp": 0,
+          "fn": 0
+        },
+        {
+          "model": "YOLO11s-Seg",
+          "tp": 9,
+          "fp": 1,
+          "fn": 0
+        },
+        {
+          "model": "YOLOv8s-Seg",
+          "tp": 9,
+          "fp": 2,
+          "fn": 0
+        }
+      ]
+    },
+    {
+      "sequence": "MOTS20-11",
+      "frame": 900,
+      "models": [
+        {
+          "model": "YOLO26s-Seg",
+          "tp": 7,
+          "fp": 1,
+          "fn": 4
+        },
+        {
+          "model": "YOLO11s-Seg",
+          "tp": 6,
+          "fp": 0,
+          "fn": 5
+        },
+        {
+          "model": "YOLOv8s-Seg",
+          "tp": 5,
+          "fp": 2,
+          "fn": 6
+        }
+      ]
+    }
+  ],
+  "cases": [
+    {
+      "case": 1,
+      "sequence": "MOTS20-02",
+      "frame": 300,
+      "role": "จำแนกโมเดล",
+      "pain_point": "คนเล็กทางซ้ายและ GT ด้านหลังคู่คนใหญ่",
+      "decision_use": "เป็น case ที่ช่วยเลือกด้าน coverage ได้ชัด: TP 10/7/8 และ FP 1/3/3 ของ YOLO26s/YOLO11s/YOLOv8s พร้อมตำแหน่ง GT ที่ต่างกัน",
+      "limit": "GT 2040 ของ YOLO11s และ GT 2027 ของ YOLOv8s มี mask ใกล้เกณฑ์; การพลาดบาง GT คือ matching error ไม่ใช่ไม่มี detection",
+      "full_comparison_sha256": "aa5ecfb0c482c388352eb0e3e33647d64e1776b8408c15c95856096ea2d68ae5",
+      "focus_sha256": "76096354000e82bc3f8d5f58bbf423c22ab00bd1feaa0596f9030fe9bb2e5fc7",
+      "matching_diagnostics_inspected": true
+    },
+    {
+      "case": 2,
+      "sequence": "MOTS20-09",
+      "frame": 263,
+      "role": "ข้อจำกัดร่วม / ต่าง GT",
+      "pain_point": "FN กลางกลุ่มคนและ error คนละ ID",
+      "decision_use": "ช่วยเห็นว่ายังมี FN ร่วม และ pair ที่ mAP near-tied อาจพลาดคนคนละชุด; ใช้ตรวจความครบถ้วนและ unmatched output ร่วมกัน",
+      "limit": "Mean TP-only IoU ที่สูงกว่าใน YOLOv8s มาจากชุด TP ที่น้อยกว่า จึงไม่แทนความครบถ้วนของเฟรม",
+      "full_comparison_sha256": "dd961de4277b30c321fe72141ccb2773b0ffc0b6ea18a0b1ef562cec44602027",
+      "focus_sha256": "a9c94084b26e407289dfd5f94ad2599207fee81264323a9c2006319e8b489788",
+      "matching_diagnostics_inspected": true
+    },
+    {
+      "case": 3,
+      "sequence": "MOTS20-02",
+      "frame": 600,
+      "role": "สวนอันดับ / near-tie",
+      "pain_point": "GT 2043 และ unmatched masks ริมขวา",
+      "decision_use": "ช่วยตรวจ pair near-tied YOLO11s/YOLOv8s ซึ่งเก็บ valid GT ครบ 10 ในเฟรมนี้ แต่ YOLO26s มี FN 2043 และ FP เพิ่ม",
+      "limit": "อันดับ mAP/Recall รวมไม่รับรองทุกเฟรม; FP ใต้ร่มไม่จำเป็นต้องเป็นคนที่ไม่มีจริงตาม GT/ignore policy",
+      "full_comparison_sha256": "eccba38fc5cc434bd358f8a9d297244aadfa265f53a86ad222ea0d8c089df15a",
+      "focus_sha256": "db6737b32184715e222892244932a69e6d578fb7cf6ce6df1bc6dd328c410d4c",
+      "matching_diagnostics_inspected": true
+    },
+    {
+      "case": 4,
+      "sequence": "MOTS20-09",
+      "frame": 1,
+      "role": "extra mask / near-tie",
+      "pain_point": "mask เพิ่มบนบริเวณฉากหลังร้าน",
+      "decision_use": "เป็น pain point ที่แยกคู่ near-tied ได้ในตัวอย่างนี้: YOLO11s มี FP หนึ่ง mask แม้ทุกโมเดลเก็บ valid GT ครบ",
+      "limit": "ต้องอ่านภาพเต็มร่วมกับ ROI; FP นี้ไม่ทับ valid GT แต่ไม่ใช่หลักฐานความถี่ hallucination หรือ background robustness",
+      "full_comparison_sha256": "78d5c695ccf4d8104f1b6965aa073c0bd3985cdbf1dacef2947af65a2431273e",
+      "focus_sha256": "f28fa47fc781a8bec8c3bef446a8be07e76b77db19af13a427cb093947ca9524",
+      "matching_diagnostics_inspected": true
+    }
+  ],
+  "presentation_sha256": "c45e8458005dbad5edf165dc932f300370e316ce8b66c24b81339fa56ea7d62c"
+}

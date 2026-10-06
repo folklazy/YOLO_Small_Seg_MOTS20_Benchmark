@@ -12,16 +12,3 @@ Pool: the 12 frames in `manifests/visualization_frames.json`, frozen before full
 Original/GT followed by YOLO26s, YOLO11s, YOLOv8s, full frame at identical scale. Confidence 0.25, mask IoU 0.50, ignore prediction IOA 0.50. FP means unmatched under the benchmark, not necessarily a nonexistent person; FN can mean a mask did not pass matching. TP-only means need not compare identical matched GT sets.
 
 `CASE_EVIDENCE.json` records original/GT/prediction/comparison hashes and verified per-frame counts. Source: `metrics/benchmark-20261005T051531Z/per_frame/` and saved lossless RLE predictions. Renderer: Master Study `src/build_qualitative_comparisons.py --tier Small`. No observed merging/fragmentation/boundary leakage category is asserted without evidence.
-
-## Decision-use review (2026-10-06)
-
-All 12 frozen candidates were rechecked; all four full comparisons and four identical-ROI views were inspected. Selected frames retained for diagnostic diversity, not because every case shows a leader win. The pool does not represent all frames or sequences.
-
-| Case | Role | Pain point |
-|---|---|---|
-| 1 | จำแนกโมเดล | คนเล็กทางซ้ายและ GT ด้านหลังคู่คนใหญ่ |
-| 2 | ข้อจำกัดร่วม / ต่าง GT | FN กลางกลุ่มคนและ error คนละ ID |
-| 3 | สวนอันดับ / near-tie | GT 2043 และ unmatched masks ริมขวา |
-| 4 | extra mask / near-tie | mask เพิ่มบนบริเวณฉากหลังร้าน |
-
-See [FOCUS_EVIDENCE.json](FOCUS_EVIDENCE.json) for fixed-metric assignments and per-target diagnostic IoU. Full comparisons are unchanged. ROI views are supplementary; count semantics refer to the full frame. These examples support conditional decisions about segmentation coverage and extra masks; they cannot establish dataset-wide error frequency, system speed or VRAM.

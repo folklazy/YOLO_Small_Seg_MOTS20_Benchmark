@@ -20,20 +20,6 @@ Small ไม่มี comparison เดิม จึงสร้างจาก 
 ใช้ confidence ≥0.25, mask matching IoU ≥0.50 และ ignore policy เดิม FN หมายถึง GT ที่ไม่มีคู่ผ่านเกณฑ์ อาจเกิดจาก mask ไม่ผ่าน IoU ไม่ใช่ไม่มี detection เสมอ FP หมายถึง prediction ที่ไม่ match valid GT และไม่ถูก ignore จึงไม่จำเป็นต้องเป็นคนที่ไม่มีอยู่จริง
 GT panel แสดงเฉพาะ Person; IGN ไม่ถูกนับเป็น FP ตัวเลขรายเฟรมตรวจตรงกับ CSV เดิม
 
-### Case เหล่านี้ช่วยตัดสินใจอย่างไร
-
-ชุดนี้ใช้ประกอบการเลือกด้านความครบถ้วนของ instance และ unmatched output โดยอ่านร่วมกับ canonical metrics ไม่ได้ให้ผู้ชนะทุกภาพหรือใช้วัด latency/VRAM หลาย tier ใช้เฟรมเดิมเพื่อให้เปรียบเทียบภายใน tier ได้ตรงกัน จึงไม่ใช่ตัวอย่างอิสระจำนวนมาก และ 4 cases ไม่แทน 2,862 เฟรม
-
-| Case | Pain point / บทบาท | ใช้ประกอบการเลือกด้านใด |
-|---|---|---|
-| 1 | จำแนกโมเดล: คนเล็กทางซ้ายและ GT ด้านหลังคู่คนใหญ่ | เป็น case ที่ช่วยเลือกด้าน coverage ได้ชัด: TP 10/7/8 และ FP 1/3/3 ของ YOLO26s/YOLO11s/YOLOv8s พร้อมตำแหน่ง GT ที่ต่างกัน |
-| 2 | ข้อจำกัดร่วม / ต่าง GT: FN กลางกลุ่มคนและ error คนละ ID | ช่วยเห็นว่ายังมี FN ร่วม และ pair ที่ mAP near-tied อาจพลาดคนคนละชุด; ใช้ตรวจความครบถ้วนและ unmatched output ร่วมกัน |
-| 3 | สวนอันดับ / near-tie: GT 2043 และ unmatched masks ริมขวา | ช่วยตรวจ pair near-tied YOLO11s/YOLOv8s ซึ่งเก็บ valid GT ครบ 10 ในเฟรมนี้ แต่ YOLO26s มี FN 2043 และ FP เพิ่ม |
-| 4 | extra mask / near-tie: mask เพิ่มบนบริเวณฉากหลังร้าน | เป็น pain point ที่แยกคู่ near-tied ได้ในตัวอย่างนี้: YOLO11s มี FP หนึ่ง mask แม้ทุกโมเดลเก็บ valid GT ครบ |
-
-ภาพขยายเป็น ROI เพิ่มเติมจาก original frames และ saved masks แถวแรก Original/GT ต่อด้วยโมเดลตามลำดับเดิม แต่ละคอลัมน์ใช้พิกัด/scale เดียวกันทุกโมเดล แถว Original/GT ใช้เส้นขาวแสดง valid GT; ในแถวโมเดลเส้นขาวคือ GT ที่ match เส้นส้มคือ FN; สีแดงคือ FP สีเทาคือ ignored prediction พิกัด ROI อยู่บนภาพ ภาพเต็มยังแสดงไว้เพื่อไม่ซ่อน error นอก ROI การขยายไม่เพิ่มรายละเอียดจากต้นฉบับ
-ค่าราย GT ด้านล่างเป็น diagnostic ของ saved predictions ที่ confidence ≥0.25: TP ใช้ IoU ของคู่ที่ evaluator จับจริง; FN แสดง IoU สูงสุดของ candidate ที่มี ไม่ใช่ AP และไม่เปลี่ยน benchmark ตัวเลข TP/FP/FN ในคำอธิบายเป็นของเต็มเฟรม ไม่ใช่จำนวนใน ROI
-
 ## Case 1 — ความต่างในการเก็บ Person ขนาดเล็กและด้านหลัง
 
 เหตุผลที่เลือก: แสดง instance ที่ตัวนำเก็บเพิ่ม พร้อมข้อผิดพลาดที่ยังมีร่วมกัน · MOTS20-02 / 000300
@@ -42,29 +28,11 @@ GT panel แสดงเฉพาะ Person; IGN ไม่ถูกนับเ�
 
 ![Case 1 Small MOTS20-02 frame 300](outputs/visualizations/qualitative/case_01_comparison.png)
 
-ภาพขยายจุดที่ต้องตรวจ (ใช้คู่กับภาพเต็มด้านบน):
-
-![Case 1 focus — identical region across models](outputs/visualizations/qualitative/case_01_focus.png)
-
 ### สิ่งที่เห็นจากภาพ
 
 - YOLO26s match ได้ 10 instances เทียบกับ YOLO11s 7 และ YOLOv8s 8; YOLO26s เก็บ GT 2003 ด้านหลังคู่คนใหญ่กลางภาพได้ แต่อีกสองโมเดลมี FN ตรงนี้
 - บริเวณคนตัวเล็กทางซ้าย YOLO26s/YOLOv8s match GT 2026 ขณะที่ YOLO11s มี FN; GT 2027 ถูก match ใน YOLO26s/YOLO11s แต่เป็น FN ใน YOLOv8s
 - ทุกโมเดลมี FN ของ GT 2028/2029 ฝั่งซ้าย และยังมี FP: YOLO26s 1, YOLO11s/YOLOv8s อย่างละ 3 โดยบาง mask แดงทับบริเวณคนจริง
-
-
-ตรวจ matching ราย GT จาก saved masks:
-
-| GT | YOLO26s-Seg | YOLO11s-Seg | YOLOv8s-Seg |
-|---|---|---|---|
-| 2003 | TP IoU 0.530 | FN; best IoU 0.009 | FN; best IoU 0.020 |
-| 2026 | TP IoU 0.757 | FN; best IoU 0.000 | TP IoU 0.686 |
-| 2027 | TP IoU 0.617 | TP IoU 0.565 | FN; best IoU 0.474 |
-| 2028 | FN; best IoU 0.000 | FN; best IoU 0.000 | FN; best IoU 0.000 |
-| 2029 | FN; best IoU 0.003 | FN; best IoU 0.000 | FN; best IoU 0.002 |
-| 2040 | TP IoU 0.620 | FN; best IoU 0.492 | TP IoU 0.590 |
-
-IoU 0.000 คือค่าที่ปัดสามตำแหน่ง ไม่ยืนยันว่าไม่มี prediction; candidate อาจมีพื้นที่ทับ GT ต่ำหรือมีคู่กับ GT อื่นแล้ว FN จึงต้องอ่านร่วมกับภาพและ full-frame matching
 
 ### วิเคราะห์
 
@@ -74,15 +42,6 @@ IoU 0.000 คือค่าที่ปัดสามตำแหน่ง ไ
 
 ตัวอย่างนี้สอดคล้องในทิศทางกับ Recall รวมของ YOLO26s 0.789581 ที่สูงกว่า YOLO11s 0.764148 และ YOLOv8s 0.767309 แต่ไม่อธิบายช่องว่างทั้ง dataset Mean matched-mask IoU ในเฟรมนี้คือ YOLO26s-Seg 0.748902; YOLO11s-Seg 0.759296; YOLOv8s-Seg 0.766392 ซึ่ง YOLO26s ไม่ได้สูงสุด ค่านี้เฉลี่ยจากชุด GT ที่ match ต่างกัน จึงไม่ควรสรุปคุณภาพขอบของคนเดียวกันจากค่าเฉลี่ยนี้
 
-
-### ใช้ประกอบการเลือกอย่างไร
-
-**Pain point / บทบาท:** จำแนกโมเดล — คนเล็กทางซ้ายและ GT ด้านหลังคู่คนใหญ่
-
-**ใช้ประกอบการเลือก:** เป็น case ที่ช่วยเลือกด้าน coverage ได้ชัด: TP 10/7/8 และ FP 1/3/3 ของ YOLO26s/YOLO11s/YOLOv8s พร้อมตำแหน่ง GT ที่ต่างกัน
-
-**ขอบเขตหลักฐาน:** GT 2040 ของ YOLO11s และ GT 2027 ของ YOLOv8s มี mask ใกล้เกณฑ์; การพลาดบาง GT คือ matching error ไม่ใช่ไม่มี detection
-
 ## Case 2 — ข้อผิดพลาดร่วมในกลุ่มคนกลางภาพ
 
 เหตุผลที่เลือก: แสดง FN/FP ที่ยังพบแม้ในโมเดลนำ แทนเลือกเฉพาะภาพที่ได้เปรียบ · MOTS20-09 / 000263
@@ -91,28 +50,11 @@ IoU 0.000 คือค่าที่ปัดสามตำแหน่ง ไ
 
 ![Case 2 Small common failures](outputs/visualizations/qualitative/case_02_comparison.png)
 
-ภาพขยายจุดที่ต้องตรวจ (ใช้คู่กับภาพเต็มด้านบน):
-
-![Case 2 focus — identical region across models](outputs/visualizations/qualitative/case_02_focus.png)
-
 ### สิ่งที่เห็นจากภาพ
 
 - ทุกโมเดลมี FN ของ GT 2002/2011 ในกลุ่มคนกลางภาพและ GT 2023 ริมขวา; GT บางส่วนมองเห็นเป็นพื้นที่เล็กอยู่ระหว่างคนอื่น
 - YOLO26s/YOLO11s/YOLOv8s match ได้ 9/8/7 instances ตามลำดับ แต่ยังมี FP 2/3/3 masks รวม mask แดงในบริเวณคนกลางภาพ
 - YOLO26s match GT 2001 ได้ ขณะที่ YOLO11s/YOLOv8s มี FN; GT 2007 ถูก match ใน YOLO11s แต่เป็น FN ในอีกสองโมเดล
-
-
-ตรวจ matching ราย GT จาก saved masks:
-
-| GT | YOLO26s-Seg | YOLO11s-Seg | YOLOv8s-Seg |
-|---|---|---|---|
-| 2001 | TP IoU 0.513 | FN; best IoU 0.313 | FN; best IoU 0.280 |
-| 2002 | FN; best IoU 0.010 | FN; best IoU 0.010 | FN; best IoU 0.013 |
-| 2007 | FN; best IoU 0.054 | TP IoU 0.622 | FN; best IoU 0.054 |
-| 2011 | FN; best IoU 0.404 | FN; best IoU 0.376 | FN; best IoU 0.353 |
-| 2018 | TP IoU 0.515 | FN; best IoU 0.464 | FN; best IoU 0.477 |
-
-IoU 0.000 คือค่าที่ปัดสามตำแหน่ง ไม่ยืนยันว่าไม่มี prediction; candidate อาจมีพื้นที่ทับ GT ต่ำหรือมีคู่กับ GT อื่นแล้ว FN จึงต้องอ่านร่วมกับภาพและ full-frame matching
 
 ### วิเคราะห์
 
@@ -122,15 +64,6 @@ IoU 0.000 คือค่าที่ปัดสามตำแหน่ง ไ
 
 แม้ YOLO26s มี mAP/AP75/Recall รวมสูงสุด ก็ยังมี FN/FP ในกรณีนี้ Mean matched-mask IoU ของ YOLOv8s ในเฟรมสูงกว่า YOLO26s แต่มี TP น้อยกว่า จึงต้องระวัง selection ของคู่ที่ match เมื่ออ่าน TP-only quality การคำนวณอัตราผิดพลาดทั้ง dataset ต้องใช้ canonical metrics ไม่ขยายจำนวนจากเฟรมนี้
 
-
-### ใช้ประกอบการเลือกอย่างไร
-
-**Pain point / บทบาท:** ข้อจำกัดร่วม / ต่าง GT — FN กลางกลุ่มคนและ error คนละ ID
-
-**ใช้ประกอบการเลือก:** ช่วยเห็นว่ายังมี FN ร่วม และ pair ที่ mAP near-tied อาจพลาดคนคนละชุด; ใช้ตรวจความครบถ้วนและ unmatched output ร่วมกัน
-
-**ขอบเขตหลักฐาน:** Mean TP-only IoU ที่สูงกว่าใน YOLOv8s มาจากชุด TP ที่น้อยกว่า จึงไม่แทนความครบถ้วนของเฟรม
-
 ## Case 3 — กรณีสวนอันดับและ trade-off ของ matching
 
 เหตุผลที่เลือก: ตัวอย่างที่ YOLO11s/YOLOv8s เก็บ valid Person ครบกว่า accuracy leader · MOTS20-02 / 000600
@@ -139,24 +72,11 @@ IoU 0.000 คือค่าที่ปัดสามตำแหน่ง ไ
 
 ![Case 3 Small counterexample and near-tie pair](outputs/visualizations/qualitative/case_03_comparison.png)
 
-ภาพขยายจุดที่ต้องตรวจ (ใช้คู่กับภาพเต็มด้านบน):
-
-![Case 3 focus — identical region across models](outputs/visualizations/qualitative/case_03_focus.png)
-
 ### สิ่งที่เห็นจากภาพ
 
 - YOLO11s และ YOLOv8s match valid GT ครบ 10 instances และไม่มี FN; YOLO26s match ได้ 9 โดยมี FN ของ GT 2043 ในกลุ่มคนตัวเล็กฝั่งซ้าย
 - YOLO26s มี FP 3 masks เทียบกับอีกสองโมเดลอย่างละ 1; ทั้งสามมี mask แดงบริเวณคนใต้ร่มริมขวาที่ไม่ match valid GT ตาม benchmark
 - ผลของ YOLO11s/YOLOv8s ดูใกล้กันในภาพเต็มเฟรม ทั้งกลุ่มคนด้านหน้าและคนตัวเล็กฝั่งซ้าย แต่ไม่ได้มี mask เหมือนกันทุกพิกเซล
-
-
-ตรวจ matching ราย GT จาก saved masks:
-
-| GT | YOLO26s-Seg | YOLO11s-Seg | YOLOv8s-Seg |
-|---|---|---|---|
-| 2043 | FN; best IoU 0.328 | TP IoU 0.565 | TP IoU 0.526 |
-
-IoU 0.000 คือค่าที่ปัดสามตำแหน่ง ไม่ยืนยันว่าไม่มี prediction; candidate อาจมีพื้นที่ทับ GT ต่ำหรือมีคู่กับ GT อื่นแล้ว FN จึงต้องอ่านร่วมกับภาพและ full-frame matching
 
 ### วิเคราะห์
 
@@ -166,15 +86,6 @@ IoU 0.000 คือค่าที่ปัดสามตำแหน่ง ไ
 
 YOLO26s มี Recall รวมสูงสุด แต่ไม่ได้มี TP สูงสุดทุกเฟรม Mean matched-mask IoU ในกรณีนี้คือ YOLO26s-Seg 0.707092; YOLO11s-Seg 0.640449; YOLOv8s-Seg 0.639208; YOLO26s สูงกว่าแต่มี FN/FP มากกว่า จึงแสดงว่าคุณภาพเฉพาะคู่ที่ match กับความครบถ้วนเป็นคนละด้าน AP75 ประเมิน confidence ranking และ stricter IoU จึงไม่เท่ากับ TP ที่ threshold 0.50 ในเฟรมเดียว
 
-
-### ใช้ประกอบการเลือกอย่างไร
-
-**Pain point / บทบาท:** สวนอันดับ / near-tie — GT 2043 และ unmatched masks ริมขวา
-
-**ใช้ประกอบการเลือก:** ช่วยตรวจ pair near-tied YOLO11s/YOLOv8s ซึ่งเก็บ valid GT ครบ 10 ในเฟรมนี้ แต่ YOLO26s มี FN 2043 และ FP เพิ่ม
-
-**ขอบเขตหลักฐาน:** อันดับ mAP/Recall รวมไม่รับรองทุกเฟรม; FP ใต้ร่มไม่จำเป็นต้องเป็นคนที่ไม่มีจริงตาม GT/ignore policy
-
 ## Case 4 — เก็บ valid Person เหมือนกัน แต่ FP ต่างกัน
 
 เหตุผลที่เลือก: ตรวจผลที่ใกล้กันและ near-tied pair พร้อม error เฉพาะโมเดล · MOTS20-09 / 000001
@@ -183,16 +94,11 @@ YOLO26s มี Recall รวมสูงสุด แต่ไม่ได้ม
 
 ![Case 4 Small similar outputs and background FP](outputs/visualizations/qualitative/case_04_comparison.png)
 
-ภาพขยายจุดที่ต้องตรวจ (ใช้คู่กับภาพเต็มด้านบน):
-
-![Case 4 focus — identical region across models](outputs/visualizations/qualitative/case_04_focus.png)
-
 ### สิ่งที่เห็นจากภาพ
 
 - ทุกโมเดล match valid GT ครบ 6 instances และไม่มี FN รวมคนใหญ่ริมขอบภาพและ Person ตัวเล็กบริเวณหน้าร้าน
 - YOLO26s/YOLOv8s ไม่มี FP; YOLO11s มี FP เล็กหนึ่ง mask บริเวณฉากหลังร้านฝั่งซ้าย ซึ่งไม่ทับ valid GT Person
 - Mask หลักดูคล้ายกันเมื่อดูเต็มเฟรม แต่รายละเอียดขอบและตำแหน่ง IGN ไม่ตรงกันทั้งหมด
-
 
 ### วิเคราะห์
 
@@ -201,15 +107,6 @@ YOLO26s มี Recall รวมสูงสุด แต่ไม่ได้ม
 ### เชื่อมกับผลเชิงตัวเลข
 
 Mean matched-mask IoU ของเฟรมนี้คือ YOLO26s-Seg 0.781844; YOLO11s-Seg 0.765869; YOLOv8s-Seg 0.742147; ทุกโมเดลมี TP เท่ากัน แต่ overlap ไม่เท่ากัน และ YOLO11s มี FP เพิ่ม แม้ mAP รวมสูงกว่า YOLOv8s เล็กน้อย ตัวอย่างนี้ช่วยตีความว่าคะแนนใกล้กันอาจรวมผลจากข้อผิดพลาดต่างชนิด ไม่ใช่หลักฐาน statistical superiority ของรุ่นใด
-
-
-### ใช้ประกอบการเลือกอย่างไร
-
-**Pain point / บทบาท:** extra mask / near-tie — mask เพิ่มบนบริเวณฉากหลังร้าน
-
-**ใช้ประกอบการเลือก:** เป็น pain point ที่แยกคู่ near-tied ได้ในตัวอย่างนี้: YOLO11s มี FP หนึ่ง mask แม้ทุกโมเดลเก็บ valid GT ครบ
-
-**ขอบเขตหลักฐาน:** ต้องอ่านภาพเต็มร่วมกับ ROI; FP นี้ไม่ทับ valid GT แต่ไม่ใช่หลักฐานความถี่ hallucination หรือ background robustness
 
 ## Failure Analysis
 

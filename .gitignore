@@ -30,3 +30,7 @@ outputs/visualizations/qualitative/*
 manifests/SMALL_ACTIVE_RUN.json
 timing/**/round*.json
 timing/**/attempts/
+
+# Supplementary same-frame ROI evidence, reviewed with the full comparisons.
+!outputs/visualizations/qualitative/case_0[1-4]_focus.png
+!outputs/visualizations/qualitative/FOCUS_EVIDENCE.json
