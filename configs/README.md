@@ -1,9 +1,1 @@
-# การตั้งค่า Small (S)
-
-## หน้าที่
-
-การตั้งค่ารอบ `benchmark-20261005T051531Z` ใช้โพรโทคอลที่ตรึงไว้ตาม Largest เปลี่ยนเฉพาะสมาชิกโมเดลของขนาดนี้ AP maxDet=200 แยกจาก model max_det=1000
-
-## การใช้งานและข้อควรระวัง
-
-ไม่แก้ benchmark.yaml หรือไฟล์ที่ตรึงระหว่างรอบทดลอง เพราะ manifest ตรวจ SHA256 ไว้ ใช้ [โพรโทคอล](../EXPERIMENT_PROTOCOL.md) และ [หลักฐานต้นทาง](../manifests/STANDARDIZATION.json) เมื่อตรวจย้อนหลังไฟล์ template ใช้ปรับเอกสารปัจจุบัน ไม่เปลี่ยนการวัดเดิม
+Setup-only protocol configuration inherited from Largest. NOT a frozen run. Before authorized execution, freeze this file and checkpoint/environment/source manifests into a fresh run. Shared paths resolve from workspace root; all generated framework outputs belong in this repository.

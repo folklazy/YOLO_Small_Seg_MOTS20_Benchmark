@@ -1,26 +1,25 @@
 {
-  "timestamp": "2026-10-06T07:26:53.359339+00:00",
+  "timestamp": "2026-10-06T06:28:54.885268+00:00",
   "status": "PASS",
   "numeric_table_cells_verified": 105,
   "canonical_heading_order": "PASS",
   "local_links": "PASS",
   "presentation_policy": "Shared Visual and Qualitative Analysis format per latest user request; original numerical profile is archived.",
   "document_sha256": {
-    "README.md": "7b98d3e3e4817100ba543017c3c70e2d8b1ff28c6fce7ab5b0dc3e95d1b6991a",
-    "REPORT.md": "3d97e10c0d986c486afaa5120a9c181e0b5f3a08b631ec7ef10309ae275fdf68",
-    "RESULTS_SUMMARY_TH.md": "5db99f8630a040b730cf4a68d112dec7b2b227c33cec9ee5f8940cf363fff893",
-    "PRESENTATION_SUMMARY_TH.md": "610e588a16dffaebec853d6b4137c8068382f35bd0d92d07fc04efe2f36e2c99"
+    "README.md": "c336743f8d4a6b9a955176421d8d98d45ca0d91ee4be666771f53e420277bf0b",
+    "REPORT.md": "54c723520d0b60bc585ad185c548b151b8a439ab86a6cb4e2f41c66f18597d84",
+    "RESULTS_SUMMARY_TH.md": "38f4d73442c85e9ceaae874fe82ee000598e84bf9bdaa776007d69451bb07acb",
+    "PRESENTATION_SUMMARY_TH.md": "b9e527452f329b1e745f47f917b38a755951ea3a850e4d206b011aa5bd8f6dd0"
   },
   "template_sha256": {
-    "TIER_RESULTS_SUMMARY_TH_TEMPLATE.md": "79f42c4a5cd283155ecf7dc1fdd1a0a1f38742feff81abaebe1d2d994115ae40",
-    "TIER_README_TEMPLATE.md": "9cebecc486102bd7b55cef73d615bba04faadede097e70135713dcbe23dee994",
-    "TIER_PRESENTATION_SUMMARY_TH_TEMPLATE.md": "5c6554903ee205f57de47a5ef698d2962229bf55f803c9620b0ec4ca244f8779",
-    "TIER_REPORT_TEMPLATE.md": "2ff5e9428e43e58080d4176fec2fc10616274889c4a67d15b77c1889b23267d4"
+    "TIER_RESULTS_SUMMARY_TH_TEMPLATE.md": "f98092fb2756b04fe4b227ab69163eadf150446f6a3ad8aae8b05a6fab35e6a0",
+    "TIER_README_TEMPLATE.md": "9c72ee2b3182859543a8a0c70ed2965e6a66805d3302c4cf35257a89cf0553a8",
+    "TIER_PRESENTATION_SUMMARY_TH_TEMPLATE.md": "57128ea98e63f0a5d5f562775f0471e363d3f7971eb4b75e808442cc1cb86a16",
+    "TIER_REPORT_TEMPLATE.md": "accf2d11ecf99c6fc589f9fd872bb8488f79030d3abac7a24e6d531362c38e19"
   },
   "final_editorial_review": "Qualitative cases reselected from saved predictions; quantitative summary and benchmark values unchanged.",
   "results_policy": "Shared compact quantitative template per latest user request; original numerical profile is archived.",
   "case_decision_review": "Active selection v2: one shared anchor plus three tier diagnostics; native GT/FP diagnostics and full-frame/ROI images inspected; see manifests/QUALITATIVE_SELECTION.json",
   "selection_version": 2,
-  "other_tiers_unchanged": false,
-  "language_standardization": "th-primary: translated current Markdown; historical records and measured artifacts remain unchanged"
+  "other_tiers_unchanged": false
 }

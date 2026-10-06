@@ -1,26 +1,26 @@
-# เหตุผลเลือกกรณี Small (S) — ชุดที่ 2
+# Small — qualitative case selection v2
 
-คัดจาก 12 เฟรมใน manifest ภาพประกอบที่ตรึง โดยตรวจรายเฟรมตัวชี้วัด, ต้นฉบับ/GT และ saved RLE ที่ confidence ≥0.25 / เกณฑ์จับคู่ mask IoU ≥0.50 ตาม evaluator/ignore policy เดิม ไม่รัน inference
+คัดจาก 12 frozen visualization frames โดยตรวจ per-frame metrics, original/GT และ saved RLE ที่ confidence ≥0.25 / mask matching IoU ≥0.50 ตาม evaluator/ignore policy เดิม ไม่รัน inference
 
-1 กรณีร่วม + 3 กรณีตามพฤติกรรมของขนาดไม่บังคับภาพทั้งหมดตรงกันระหว่างขนาด; ภายในกรณีใช้เฟรมเต็มเดียวกันทุกโมเดล ROI เป็นภาพเสริม ไม่ซ่อนข้อผิดพลาดเต็มเฟรม
+1 shared anchor + 3 cases ตามพฤติกรรมของ tier ไม่บังคับภาพทั้งหมดตรงกันระหว่าง tier; ภายใน case ใช้เฟรมเต็มเดียวกันทุกโมเดล ROI เป็นภาพเสริม ไม่ซ่อน full-frame errors
 
-| กรณี | ลำดับภาพ / เฟรม | เหตุผลที่เลือกและการใช้งาน | แหล่งภาพเปรียบเทียบ |
-| --- | --- | --- | --- |
-| 1 | MOTS20-02 / 000300 | กรณีแยกพฤติกรรมของขนาดนี้: ความต่าง TP สูงสุดใน pool ที่ตรึง; เป็น กรณีที่ช่วยเลือกด้าน ความครบถ้วน ได้ชัด: TP 10/7/8 และ FP 1/3/3 ของ YOLO26s/YOLO11s/YOLOv8s พร้อมตำแหน่ง GT ที่ต่างกัน | ใช้ภาพเดิม |
-| 2 | MOTS20-09 / 000263 | กรณีร่วม: ข้อผิดพลาดร่วม; ช่วยเห็นว่ายังมี FN ร่วม และ คู่ ที่ mAP คะแนนใกล้กัน อาจพลาดคนคนละชุด; ใช้ตรวจความครบถ้วนและ prediction ที่ไม่มีคู่ ร่วมกัน | ใช้ภาพเดิม |
-| 3 | MOTS20-02 / 000600 | กรณีสวนอันดับ และ คู่คะแนนใกล้กัน; ช่วยตรวจ คู่ คะแนนใกล้กัน YOLO11s/YOLOv8s ซึ่งเก็บ valid GT ครบ 10 ในเฟรมนี้ แต่ YOLO26s มี FN 2043 และ FP เพิ่ม | ใช้ภาพเดิม |
-| 4 | MOTS20-11 / 000900 | คู่คะแนนใกล้กัน: GT ที่พลาดและผลลัพธ์ส่วนเกินต่างกัน; ใช้เทียบ คู่ คะแนนใกล้กัน บนคนเดียวกัน: YOLO11s จับคู่ 2065 ได้และไม่มี FP แต่ YOLOv8s พลาด 2065 พร้อม FP สอง mask; YOLO26s เก็บ 2064 เพิ่มแต่ยังมี FP | สร้างภาพจาก prediction ที่บันทึกไว้ |
+| Case | Sequence / frame | Why selected / decision use | Source comparison |
+|---|---|---|---|
+| 1 | MOTS20-02 / 000300 | tier diagnostic: largest TP spread in frozen pool; เป็น case ที่ช่วยเลือกด้าน coverage ได้ชัด: TP 10/7/8 และ FP 1/3/3 ของ YOLO26s/YOLO11s/YOLOv8s พร้อมตำแหน่ง GT ที่ต่างกัน | reuse existing image |
+| 2 | MOTS20-09 / 000263 | shared anchor: common failure; ช่วยเห็นว่ายังมี FN ร่วม และ pair ที่ mAP near-tied อาจพลาดคนคนละชุด; ใช้ตรวจความครบถ้วนและ unmatched output ร่วมกัน | reuse existing image |
+| 3 | MOTS20-02 / 000600 | counterexample and near-tied pair; ช่วยตรวจ pair near-tied YOLO11s/YOLOv8s ซึ่งเก็บ valid GT ครบ 10 ในเฟรมนี้ แต่ YOLO26s มี FN 2043 และ FP เพิ่ม | reuse existing image |
+| 4 | MOTS20-11 / 000900 | near-tied pair: different missed GT and extra outputs; ใช้เทียบ pair near-tied บนคนเดียวกัน: YOLO11s match 2065 ได้และไม่มี FP แต่ YOLOv8s พลาด 2065 พร้อม FP สอง mask; YOLO26s เก็บ 2064 เพิ่มแต่ยังมี FP | new composite from saved predictions |
 
-## ทำไมบางภาพยังตรงกับ ขนาดอื่น
+## ทำไมบางภาพยังตรงกับ tier อื่น
 
-กรณี 2 (09/263) ใช้ร่วมเพื่อเทียบ FN/FP บน GT ชุดเดียวกันกรณีอื่นซ้ำได้เมื่อข้อผิดพลาดเดียวกันช่วยตรวจคนละโมเดล: 05/419 ใช้ L/M ตรวจ GT 2002; 02/1 ใช้ L/M ตรวจจำนวนเท่ากันและ GT ต่างชุด; 02/600 ใช้ Largest/Small ตรวจกรณีสวนอันดับ; 02/300 ใช้ Small/Nano ตรวจ TP–FP ข้อแลกเปลี่ยน; 11/1 ใช้ L/N แต่ L ตรวจ GT 2016 ส่วน N ตรวจ GT 2028 และ mask ส่วนเกิน; 11/450 ใช้ Largest/Medium ตรวจความครบถ้วนเท่ากันกับผลลัพธ์ส่วนเกินของคนละชุดโมเดล ไม่ใช้จำนวนภาพซ้ำเป็นหลักฐานอิสระเพิ่ม
+Case 2 (09/263) ใช้ร่วมเพื่อเทียบ FN/FP บน GT ชุดเดียวกัน กรณีอื่นซ้ำได้เมื่อ error เดียวกันช่วยตรวจคนละโมเดล: 05/419 ใช้ L/M ตรวจ GT 2002; 02/1 ใช้ L/M ตรวจ equal counts และ GT ต่างชุด; 02/600 ใช้ Largest/Small ตรวจกรณีสวนอันดับ; 02/300 ใช้ Small/Nano ตรวจ TP–FP trade-off; 11/1 ใช้ L/N แต่ L ตรวจ GT 2016 ส่วน N ตรวจ GT 2028 และ extra mask; 11/450 ใช้ Largest/Medium ตรวจ coverage เท่ากันกับ extra output ของคนละชุดโมเดล ไม่ใช้จำนวนภาพซ้ำเป็นหลักฐานอิสระเพิ่ม
 
-## การแทนกรณีเดิม
+## การแทน case เดิม
 
-เดิมกรณี 4 (09/1) มี FP ฉากหลังที่น่าสนใจ แต่ 11/900 เพิ่มการตรวจคู่คะแนนใกล้กันที่แสดงทั้ง FN/FP ต่างกัน; กรณี 3 ยังแสดงผลคล้ายกันและกรณีสวนอันดับภาพ/หลักฐานเก่ายังคงเดิมเพื่อตรวจย้อนหลัง; การวิเคราะห์ภาพเก่าเก็บใน reports/archive
+เดิม Case 4 (09/1) มี FP ฉากหลังที่น่าสนใจ แต่ 11/900 เพิ่ม near-tie check ที่แสดงทั้ง FN/FP ต่างกัน; Case 3 ยังแสดงผลคล้ายกันและกรณีสวนอันดับ ภาพ/หลักฐานเก่ายังคงเดิมเพื่อ audit; presentation เก่าเก็บใน reports/archive
 
 ## ขอบเขต
 
-ทั้งห้าขนาดมี 20 ตำแหน่งกรณีแต่ใช้เฟรมต้นฉบับต่างกัน 10 เฟรม (เดิม 6) ชุดใหม่มี MOTS20-11 และยังมีข้อผิดพลาดร่วม / กรณีสวนอันดับไม่เลือกเฉพาะเฟรมที่โมเดลนำด้านความแม่นยำชนะ ทั้งนี้ pool 12 เฟรมไม่แทนชุดข้อมูล; ไม่อ้างว่าเป็นเฟรมที่ต่างที่สุดใน 2,862 เฟรมไม่ใช้ภาพวัดเวลาแฝง/VRAM หรือนัยสำคัญทางสถิติ
+ทั้งห้า tier มี 20 case slots แต่ใช้ original frames ต่างกัน 10 เฟรม (เดิม 6) ชุดใหม่มี MOTS20-11 และยังมี common failure / counterexample ไม่เลือกเฉพาะ frame ที่ accuracy leader ชนะ ทั้งนี้ pool 12 เฟรมไม่แทน dataset; ไม่อ้างว่าเป็นเฟรมที่ต่างที่สุดใน 2,862 เฟรม ไม่ใช้ภาพวัด latency/VRAM หรือ statistical significance
 
-[ชุดเฟรมที่คัดจาก](CANDIDATE_POOL.json) · [หลักฐานรายกรณี](CASE_EVIDENCE.json) · [หลักฐานภาพขยาย](FOCUS_EVIDENCE.json) · [หลักฐานใช้เลือกโมเดล](CASE_DECISION_AUDIT.json) · [ชุดหลักฐานปัจจุบัน](../../../../manifests/QUALITATIVE_SELECTION.json)
+[Candidate pool](CANDIDATE_POOL.json) · [Case evidence](CASE_EVIDENCE.json) · [Focus evidence](FOCUS_EVIDENCE.json) · [Decision audit](CASE_DECISION_AUDIT.json) · [Active selection](../../../../manifests/QUALITATIVE_SELECTION.json)

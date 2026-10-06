@@ -1,22 +1,13 @@
-# โปรแกรมของการทดลอง Small (S)
+# Small execution and saved-result documentation
 
-## หน้าที่
+Use the existing workspace `.venv/bin/python` directly. The owning paths are resolved from the scripts; shared datasets/checkpoints/environments are not copied into this experiment.
 
-รอบ `benchmark-20261005T051531Z` เสร็จแล้ว โปรแกรมรัน benchmark และตัวสร้างรายงานจากรอบเดิมเป็นหลักฐานย้อนหลัง ใช้ `.venv/bin/python` ของ workspace โดยตรง ไม่ติดตั้ง package หรือรันโมเดลใหม่เพื่อเอกสาร
+Completed run: `benchmark-20261005T051531Z`. `run_small.py --all --run-id <fresh-id>` performs singleton Small-only execution: shared validation, all-model preflight/maxDet, sequential accuracy, clean timing, canonical conversion, reports and final validation. This command starts a new benchmark and must not be rerun for documentation or after Small completion. No Nano runner is invoked.
 
-## โปรแกรมและการใช้งาน
+`benchmark_adapter.py` and `frozen_pilot/` preserve the Largest reference preprocessing/evaluator. Runtime source hashes and frozen input archives identify the exact implementation used. `timing_small.py` reuses the reference measurement loop and retains contaminated attempts separately; only three clean rounds per model enter primary metrics.
 
-- `run_small.py --all --run-id <fresh-id>` — ดูต้นฉบับเพื่อหน้าที่และอาร์กิวเมนต์; โปรแกรมรัน benchmark ต้องมีคำสั่งผู้ใช้ก่อนใช้งาน
-- `benchmark_adapter.py` — ดูต้นฉบับเพื่อหน้าที่และอาร์กิวเมนต์; โปรแกรมรัน benchmark ต้องมีคำสั่งผู้ใช้ก่อนใช้งาน
-- `frozen_pilot/` — ดูต้นฉบับเพื่อหน้าที่และอาร์กิวเมนต์; โปรแกรมรัน benchmark ต้องมีคำสั่งผู้ใช้ก่อนใช้งาน
-- `timing_small.py` — ดูต้นฉบับเพื่อหน้าที่และอาร์กิวเมนต์; โปรแกรมรัน benchmark ต้องมีคำสั่งผู้ใช้ก่อนใช้งาน
-- `build_small_results.py` — ดูต้นฉบับเพื่อหน้าที่และอาร์กิวเมนต์; โปรแกรมรัน benchmark ต้องมีคำสั่งผู้ใช้ก่อนใช้งาน
-- `report_small.py <run-id>` — ดูต้นฉบับเพื่อหน้าที่และอาร์กิวเมนต์; โปรแกรมรัน benchmark ต้องมีคำสั่งผู้ใช้ก่อนใช้งาน
-- `finalize_small_documentation.py` — ดูต้นฉบับเพื่อหน้าที่และอาร์กิวเมนต์; โปรแกรมรัน benchmark ต้องมีคำสั่งผู้ใช้ก่อนใช้งาน
-- `report_small.py` — ดูต้นฉบับเพื่อหน้าที่และอาร์กิวเมนต์; โปรแกรมรัน benchmark ต้องมีคำสั่งผู้ใช้ก่อนใช้งาน
-- `src/build_qualitative_comparisons.py --tier Small` — ดูต้นฉบับเพื่อหน้าที่และอาร์กิวเมนต์; โปรแกรมรัน benchmark ต้องมีคำสั่งผู้ใช้ก่อนใช้งาน
-- `scripts/validate_documentation_redesign.py` — ดูต้นฉบับเพื่อหน้าที่และอาร์กิวเมนต์; โปรแกรมรัน benchmark ต้องมีคำสั่งผู้ใช้ก่อนใช้งาน
+`build_small_results.py` validates saved artifacts and creates canonical CSVs without inference. `report_small.py <run-id>` renders CSV-derived reports using the user-requested Small layout snapshots under `configs/report_templates/`. `finalize_small_documentation.py` applies final editorial interpretation and checks that measured artifacts remain unchanged; its claim/hash provenance is in `manifests/FINAL_DOCUMENT_REVIEW.json`.
 
-## ข้อควรระวัง
+Lossless predictions and verbose logs remain local/ignored. Canonical metrics, reports, plots, source, configuration and provenance are versioned. Pipeline excludes RLE preparation and disk I/O. Small is complete: STOP and wait for user approval; do not begin Nano.
 
-ตรวจ process ที่ทำงานก่อนเริ่ม ห้ามสร้าง worker ซ้ำหรือเขียนทับผลเดิมข้อมูล checkpoint และ environment ใช้ร่วมจาก workspace ไม่คัดลอกเข้าการทดลอง ตัวสร้างรายงานเก่าอาจมีหัวข้อคนละรุ่น ห้ามรันทับเอกสารปัจจุบัน ใช้ template กลางและตรวจด้วย `YOLO_Instance_Segmentation_MOTS20_Scaling_Study/scripts/validate_documentation_redesign.py` เมื่อแก้ภาษา/รูปแบบ ภาพเปรียบเทียบใช้ saved RLE และเฟรมต้นฉบับโดยไม่ inference เพิ่ม รายละเอียดการรัน แหล่งที่มาและ hash อยู่ใน manifests และต้นทางเดิม ไม่เริ่มขนาดอื่นหรือสังเคราะห์ผลรวมอัตโนมัติ
+The benchmark-time `report_small.py` and `finalize_small_documentation.py` are frozen historical renderers for the original numerical layouts. Do not rerun them over the current summaries. Both RESULTS and PRESENTATION now follow the shared master templates; the original layouts are archived. Quantitative alignment and unchanged measurements are recorded in `manifests/QUANTITATIVE_ALIGNMENT.json`; qualitative provenance remains in `manifests/VISUAL_ALIGNMENT.json`. Use saved-prediction comparisons from Master Study `src/build_qualitative_comparisons.py --tier Small` only when images do not yet exist. Validate current summaries with Master Study `scripts/validate_documentation_redesign.py`.
