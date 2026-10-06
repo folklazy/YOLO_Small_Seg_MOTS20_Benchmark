@@ -1,0 +1,290 @@
+[
+  {
+    "sequence": "MOTS20-02",
+    "frame": 1,
+    "models": [
+      {
+        "model": "YOLO26s-Seg",
+        "tp": 7,
+        "fp": 2,
+        "fn": 5
+      },
+      {
+        "model": "YOLO11s-Seg",
+        "tp": 7,
+        "fp": 0,
+        "fn": 5
+      },
+      {
+        "model": "YOLOv8s-Seg",
+        "tp": 6,
+        "fp": 2,
+        "fn": 6
+      }
+    ]
+  },
+  {
+    "sequence": "MOTS20-02",
+    "frame": 300,
+    "models": [
+      {
+        "model": "YOLO26s-Seg",
+        "tp": 10,
+        "fp": 1,
+        "fn": 2
+      },
+      {
+        "model": "YOLO11s-Seg",
+        "tp": 7,
+        "fp": 3,
+        "fn": 5
+      },
+      {
+        "model": "YOLOv8s-Seg",
+        "tp": 8,
+        "fp": 3,
+        "fn": 4
+      }
+    ]
+  },
+  {
+    "sequence": "MOTS20-02",
+    "frame": 600,
+    "models": [
+      {
+        "model": "YOLO26s-Seg",
+        "tp": 9,
+        "fp": 3,
+        "fn": 1
+      },
+      {
+        "model": "YOLO11s-Seg",
+        "tp": 10,
+        "fp": 1,
+        "fn": 0
+      },
+      {
+        "model": "YOLOv8s-Seg",
+        "tp": 10,
+        "fp": 1,
+        "fn": 0
+      }
+    ]
+  },
+  {
+    "sequence": "MOTS20-05",
+    "frame": 1,
+    "models": [
+      {
+        "model": "YOLO26s-Seg",
+        "tp": 2,
+        "fp": 0,
+        "fn": 3
+      },
+      {
+        "model": "YOLO11s-Seg",
+        "tp": 2,
+        "fp": 0,
+        "fn": 3
+      },
+      {
+        "model": "YOLOv8s-Seg",
+        "tp": 2,
+        "fp": 0,
+        "fn": 3
+      }
+    ]
+  },
+  {
+    "sequence": "MOTS20-05",
+    "frame": 419,
+    "models": [
+      {
+        "model": "YOLO26s-Seg",
+        "tp": 4,
+        "fp": 0,
+        "fn": 2
+      },
+      {
+        "model": "YOLO11s-Seg",
+        "tp": 4,
+        "fp": 0,
+        "fn": 2
+      },
+      {
+        "model": "YOLOv8s-Seg",
+        "tp": 3,
+        "fp": 1,
+        "fn": 3
+      }
+    ]
+  },
+  {
+    "sequence": "MOTS20-05",
+    "frame": 837,
+    "models": [
+      {
+        "model": "YOLO26s-Seg",
+        "tp": 8,
+        "fp": 0,
+        "fn": 1
+      },
+      {
+        "model": "YOLO11s-Seg",
+        "tp": 7,
+        "fp": 2,
+        "fn": 2
+      },
+      {
+        "model": "YOLOv8s-Seg",
+        "tp": 8,
+        "fp": 0,
+        "fn": 1
+      }
+    ]
+  },
+  {
+    "sequence": "MOTS20-09",
+    "frame": 1,
+    "models": [
+      {
+        "model": "YOLO26s-Seg",
+        "tp": 6,
+        "fp": 0,
+        "fn": 0
+      },
+      {
+        "model": "YOLO11s-Seg",
+        "tp": 6,
+        "fp": 1,
+        "fn": 0
+      },
+      {
+        "model": "YOLOv8s-Seg",
+        "tp": 6,
+        "fp": 0,
+        "fn": 0
+      }
+    ]
+  },
+  {
+    "sequence": "MOTS20-09",
+    "frame": 263,
+    "models": [
+      {
+        "model": "YOLO26s-Seg",
+        "tp": 9,
+        "fp": 2,
+        "fn": 4
+      },
+      {
+        "model": "YOLO11s-Seg",
+        "tp": 8,
+        "fp": 3,
+        "fn": 5
+      },
+      {
+        "model": "YOLOv8s-Seg",
+        "tp": 7,
+        "fp": 3,
+        "fn": 6
+      }
+    ]
+  },
+  {
+    "sequence": "MOTS20-09",
+    "frame": 525,
+    "models": [
+      {
+        "model": "YOLO26s-Seg",
+        "tp": 5,
+        "fp": 2,
+        "fn": 5
+      },
+      {
+        "model": "YOLO11s-Seg",
+        "tp": 5,
+        "fp": 2,
+        "fn": 5
+      },
+      {
+        "model": "YOLOv8s-Seg",
+        "tp": 5,
+        "fp": 2,
+        "fn": 5
+      }
+    ]
+  },
+  {
+    "sequence": "MOTS20-11",
+    "frame": 1,
+    "models": [
+      {
+        "model": "YOLO26s-Seg",
+        "tp": 10,
+        "fp": 1,
+        "fn": 4
+      },
+      {
+        "model": "YOLO11s-Seg",
+        "tp": 9,
+        "fp": 0,
+        "fn": 5
+      },
+      {
+        "model": "YOLOv8s-Seg",
+        "tp": 9,
+        "fp": 0,
+        "fn": 5
+      }
+    ]
+  },
+  {
+    "sequence": "MOTS20-11",
+    "frame": 450,
+    "models": [
+      {
+        "model": "YOLO26s-Seg",
+        "tp": 9,
+        "fp": 0,
+        "fn": 0
+      },
+      {
+        "model": "YOLO11s-Seg",
+        "tp": 9,
+        "fp": 1,
+        "fn": 0
+      },
+      {
+        "model": "YOLOv8s-Seg",
+        "tp": 9,
+        "fp": 2,
+        "fn": 0
+      }
+    ]
+  },
+  {
+    "sequence": "MOTS20-11",
+    "frame": 900,
+    "models": [
+      {
+        "model": "YOLO26s-Seg",
+        "tp": 7,
+        "fp": 1,
+        "fn": 4
+      },
+      {
+        "model": "YOLO11s-Seg",
+        "tp": 6,
+        "fp": 0,
+        "fn": 5
+      },
+      {
+        "model": "YOLOv8s-Seg",
+        "tp": 5,
+        "fp": 2,
+        "fn": 6
+      }
+    ]
+  }
+]

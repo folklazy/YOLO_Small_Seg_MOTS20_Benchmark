@@ -34,3 +34,15 @@ timing/**/attempts/
 # Supplementary same-frame ROI evidence, reviewed with the full comparisons.
 !outputs/visualizations/qualitative/case_0[1-4]_focus.png
 !outputs/visualizations/qualitative/FOCUS_EVIDENCE.json
+
+# Reviewed qualitative selection v2; other generated outputs remain ignored.
+!outputs/visualizations/qualitative/selection_v2/
+outputs/visualizations/qualitative/selection_v2/*
+!outputs/visualizations/qualitative/selection_v2/CASE_EVIDENCE.json
+!outputs/visualizations/qualitative/selection_v2/FOCUS_EVIDENCE.json
+!outputs/visualizations/qualitative/selection_v2/CANDIDATE_POOL.json
+!outputs/visualizations/qualitative/selection_v2/INSPECTED_ROIS.json
+!outputs/visualizations/qualitative/selection_v2/CASE_SELECTION.md
+!outputs/visualizations/qualitative/selection_v2/CASE_DECISION_AUDIT.json
+!outputs/visualizations/qualitative/selection_v2/case_04_comparison.png
+!outputs/visualizations/qualitative/selection_v2/case_04_focus.png

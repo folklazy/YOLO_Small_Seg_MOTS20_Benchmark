@@ -1,0 +1,15 @@
+{
+  "selection_version": 2,
+  "status": "PASS_WITH_LIMITATIONS",
+  "case_evidence": "outputs/visualizations/qualitative/selection_v2/CASE_EVIDENCE.json",
+  "focus_evidence": "outputs/visualizations/qualitative/selection_v2/FOCUS_EVIDENCE.json",
+  "case_decision_audit": "outputs/visualizations/qualitative/selection_v2/CASE_DECISION_AUDIT.json",
+  "case_selection": "outputs/visualizations/qualitative/selection_v2/CASE_SELECTION.md",
+  "shared_anchor": {
+    "sequence": "MOTS20-09",
+    "frame": 263,
+    "case": 2
+  },
+  "inference_rerun": false,
+  "measured_values_changed": false
+}
